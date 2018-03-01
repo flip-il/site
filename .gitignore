@@ -1,0 +1,14 @@
+.bundle
+.sass-cache
+.cache
+dist
+vendor/bundle
+dummy.*
+credentials.rb
+.idea/node_modules
+.tmp/
+node_modules/
+build/
+.idea
+.DS_Store
+tmp/
