@@ -6,7 +6,7 @@ import {style, keyframes} from 'typestyle'
 import {titleToAnchor} from '../helpers'
 import splashImage from '../../public/flip-logo-splash.png'
 
-export default function splash(): VNode {
+export default function splash() : VNode {
     const pulsateKeyframes = keyframes({
                                            '0%, 100%': {transform: 'rotate(-2deg) scale(1, 1)'},
                                            '50%':      {transform: 'rotate(-6deg) scale(1.2, 1.2)'}
@@ -35,10 +35,10 @@ export default function splash(): VNode {
                             }, popArtShadow)
     const subtitleClass = style({
                                     textAlign:  'center',
-                                    fontSize:   '5em',
+                                    fontSize:   '3em',
                                     fontFamily: 'Bangers',
                                     margin:     '0 auto',
-                                    maxWidth:   '1000px',
+                                    maxWidth:   '1000px'
                                 }, popArtShadow)
     const signupClass = style({
                                   textAlign:  'center',
@@ -48,6 +48,10 @@ export default function splash(): VNode {
                                   maxWidth:   '1000px',
                                   animation:  `${pulsateKeyframes} 4s infinite`
                               }, popArtShadow)
+    const overviewClass = style({
+        padding: '40px',
+        textAlign: 'justify'
+    })
 
     return (
         <div id={titleToAnchor('FLIP')}>
@@ -58,6 +62,9 @@ export default function splash(): VNode {
             </div>
             <div className={dateClass}>
                 {AppData['About'].date}
+            </div>
+            <div className={overviewClass}>
+                {AppData['About'].overview}
             </div>
         </div>
     )

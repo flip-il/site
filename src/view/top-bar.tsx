@@ -8,7 +8,7 @@ import * as csstips from 'csstips'
 import topBarBg from '../../public/terrible-line.png'
 import logo from '../../public/flip-logo-sm.png'
 
-export default function topBar(state: AppState): VNode {
+export default function topBar(state : AppState) : VNode {
     const topBarClass = style(csstips.horizontal, csstips.content, csstips.height(85), {
         background: `url(${topBarBg})`,
         position:   'fixed',

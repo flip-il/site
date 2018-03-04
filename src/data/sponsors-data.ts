@@ -6,7 +6,8 @@ type SponsorType =
 
 export type Sponsor = {
     name : string,
-    logo : any,
+    logo : string,
+    link : string,
     sponsorType : SponsorType
 }
 
@@ -14,11 +15,13 @@ export const SponsorsData = [
     {
         name:        'Academic College Tel-Aviv-Yafo',
         logo:        mtaLogo,
-        sponsorType: 'Partner'
+        sponsorType: 'Partner',
+        link:        'https://www.mta.ac.il/he-il/'
     },
     {
         name:        'Hamakor',
         logo:        hamakorLogo,
-        sponsorType: 'Partner'
+        sponsorType: 'Partner',
+        link:        'https://www.hamakor.org.il/'
     }
 ]

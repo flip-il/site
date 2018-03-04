@@ -63,7 +63,7 @@ function eventAnimationStateToClass(state : EventAnimationStates) : string {
   }
 }
 
-export default function Speaker(teamMember : TeamMember, teamMemberState : EventAnimationStates, index : number) : VNode {
+export default function TeamMember(teamMember : TeamMember, teamMemberState : EventAnimationStates, index : number) : VNode {
   const teamMemberNameClass = style({
     margin: '10px 0 0 0',
     cursor: 'pointer'
