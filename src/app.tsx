@@ -21,6 +21,7 @@ import codeOfConduct from './view/code-of-conduct'
 
 import backgroundLeft from '../public/bg-l.png'
 import backgroundRight from '../public/bg-r.png'
+import sponsors from './view/sponsors'
 
 export type AppSources = Sources & { onion: StateSource<AppState> }
 export type AppSinks = Sinks & { onion: Stream<Reducer> }
@@ -64,6 +65,7 @@ function view(state$: Stream<AppState>): Stream<VNode> {
                          {agenda(state)}
                          {codeOfConduct()}
                          {venue()}
+                         {sponsors(state)}
                          {footer()}
                      </div>
                  </div>

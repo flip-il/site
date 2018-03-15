@@ -1,6 +1,6 @@
 import {AboutData} from './data/about-data'
 import {Agenda, AgendaDataGathering, AgendaDataOpening, AgendaDataTalks} from './data/agenda-data'
-import {Sponsor, SponsorsData} from './data/sponsors-data'
+import {SponsorData, SponsorsData} from './data/sponsors-data'
 import {default as TeamMembers, TeamMember} from './data/team-data'
 
 type AppDataType = {

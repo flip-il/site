@@ -9,48 +9,50 @@ import {baseFont, h2Class} from '../style-helpers'
 
 export default function splash(): VNode {
     const pulsateKeyframes = keyframes({
-                                           '0%, 100%': {transform: 'rotate(-4deg) scale(1.1, 1.1)'},
-                                           '50%':      {transform: 'rotate(-4.5deg) scale(1.12, 1.12)'}
-                                       })
+        '0%, 100%': {transform: 'rotate(-4deg) scale(1.1, 1.1)'},
+        '50%': {transform: 'rotate(-4.5deg) scale(1.12, 1.12)'}
+    })
 
     const popArtShadow = {
         textShadow: '5px 5px 0 #000, 2px 0 0 black,  0 2px 0 black, 0 -2px 0 black, -2px 0 0 black',
-        color:      '#fff'
+        color: '#fff'
     }
     const splashImageClass = style({
-                                       maxWidth:       '1200px',
-                                       height:         '65vh',
-                                       maxHeight:      '840px',
-                                       margin:         '0 auto',
-                                       background:     `url(${splashImage}) no-repeat 50%`,
-                                       backgroundSize: 'contain', marginTop: '40px',
-                                       overflowX:      'hidden'
-                                   })
+        maxWidth: '1200px',
+        height: '65vh',
+        maxHeight: '840px',
+        margin: '0 auto',
+        background: `url(${splashImage}) no-repeat 50%`,
+        backgroundSize: 'contain', marginTop: '40px',
+        overflowX: 'hidden'
+    })
     const dateClass = style({
-                                textAlign:  'center',
-                                fontSize:   '5em',
-                                fontFamily: 'Bangers',
-                                margin:     '0 auto',
-                                maxWidth:   '1000px',
-                                animation:  `${pulsateKeyframes} 3s infinite`
-                            }, popArtShadow)
+        textAlign: 'center',
+        fontSize: '5em',
+        fontFamily: 'Bangers',
+        margin: '0 auto',
+        maxWidth: '1000px',
+        animation: `${pulsateKeyframes} 3s infinite`
+    }, popArtShadow)
     const subtitleClass = style({
-                                    textAlign:  'center',
-                                    fontSize:   '3em',
-                                    fontFamily: 'Bangers',
-                                    margin:     '0 auto',
-                                    maxWidth:   '1000px'
-                                }, popArtShadow)
+        textAlign: 'center',
+        fontSize: '3em',
+        fontFamily: 'Bangers',
+        margin: '0 auto',
+        maxWidth: '1000px',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+    }, popArtShadow)
     const signupClass = style({
-                                  textAlign:  'center',
-                                  fontSize:   '3em',
-                                  fontFamily: 'Bangers',
-                                  margin:     '0 auto',
-                                  maxWidth:   '1000px',
-                                  animation:  `${pulsateKeyframes} 4s infinite`
-                              }, popArtShadow)
+        textAlign: 'center',
+        fontSize: '3em',
+        fontFamily: 'Bangers',
+        margin: '0 auto',
+        maxWidth: '1000px',
+        animation: `${pulsateKeyframes} 4s infinite`
+    }, popArtShadow)
 
-    const overviewClass = style(h2Class, baseFont)
+    const overviewClass = style(h2Class, { fontSize: '1.5rem'}, baseFont)
 
     return (
         <div id={titleToAnchor('FLIP')}>
@@ -64,6 +66,9 @@ export default function splash(): VNode {
             </div>
             <div className={overviewClass}>
                 {AppData['About'].overview}
+            </div>
+            <div className={signupClass}>
+                <a>Call for Papers is Open!</a>
             </div>
         </div>
     )

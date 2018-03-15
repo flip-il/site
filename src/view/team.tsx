@@ -11,7 +11,7 @@ import TeamMember from './team-member'
 const container = style(csstips.horizontal, csstips.wrap, csstips.centerJustified, csstips.horizontallyCenterChildren, csstips.aroundJustified)
 const autoWidthClass = style({width: 'auto'})
 
-export default function team(state: AppState): VNode {
+export default function team(state : AppState) : VNode {
     return (
         <div id={titleToAnchor('team')}>
             <h1>The Team:</h1>
