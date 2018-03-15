@@ -5,6 +5,12 @@ export type TeamMember = Person
 import memberMcMemberface from '../../public/team/member_mcmemberface.jpg'
 import yoav from '../../public/team/yoav.png'
 import yardena from '../../public/team/yardena.jpeg'
+import guy from '../../public/team/guy.jpeg'
+import adi from '../../public/team/adi.jpeg'
+import gadi from '../../public/team/gadi.jpeg'
+import netta from '../../public/team/netta.jpeg'
+import noga from '../../public/team/noga.jpeg'
+import shani from '../../public/team/shani.jpeg'
 
 export const TeamListUnshuffled : TeamMember[] = [
     {
@@ -18,7 +24,7 @@ export const TeamListUnshuffled : TeamMember[] = [
         bio: ''
     },
     {
-        portrait: memberMcMemberface,
+        portrait: guy,
         name: 'Guy Rozen',
         bio: ''
     },
@@ -28,27 +34,27 @@ export const TeamListUnshuffled : TeamMember[] = [
         bio: ''
     },
     {
-        portrait: memberMcMemberface,
+        portrait: gadi,
         name: 'Gadi Aharoni',
         bio: ''
     },
     {
-        portrait: memberMcMemberface,
+        portrait: adi,
         name: 'Adi Polak',
         bio: ''
     },
     {
-        portrait: memberMcMemberface,
+        portrait: shani,
         name: 'Shani Margulis',
         bio: ''
     },
     {
-        portrait: memberMcMemberface,
+        portrait: netta,
         name: 'Netta Bondi',
         bio: ''
     },
     {
-        portrait: memberMcMemberface,
+        portrait: noga,
         name: 'Noga Rotman',
         bio: ''
     }
