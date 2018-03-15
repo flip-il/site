@@ -85,8 +85,10 @@ export default function Sponsor(sponsor : SponsorData,
 
     return (
         <div className={classes('sponsor', sponsorClass)} data-sponsorindex={index.toString()}>
-            <img className={sponsorLogoClass(sponsor.sponsorType)} src={sponsor.logo}/>
-            <p className={sponsorName}>{sponsor.name}</p>
+            <a href={sponsor.link} target="_blank">
+                <img className={sponsorLogoClass(sponsor.sponsorType)} src={sponsor.logo}/>
+                <p className={sponsorName}>{sponsor.name}</p>
+            </a>
         </div>
     )
 }
