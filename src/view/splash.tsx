@@ -68,7 +68,7 @@ export default function splash(): VNode {
                 {AppData['About'].overview}
             </div>
             <div className={signupClass}>
-                <a>Call for Papers is Open!</a>
+                <a href="https://goo.gl/forms/hRzJCFvVNZ5Dd5qn1">Call for Papers is Open!</a>
             </div>
         </div>
     )

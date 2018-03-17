@@ -42,6 +42,10 @@ function imageHandler () {
         {
           test: context.fileType('image'),
           loaders: [ 'file-loader' ]
+        },
+        {
+          test: /\.pdf$/,
+          loaders: [ 'file-loader' ]
         }
       ]
     }
@@ -90,6 +94,7 @@ module.exports = createConfig([
                 {from: 'CNAME'},
                 {from: 'public/data.json'},
                 {from: 'public/opengraph.png', to: 'opengraph.png'},
+                {from: 'public/code-of-conduct.pdf', to: 'code-of-conduct.pdf'},
             ])
         ])
     ])
