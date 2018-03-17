@@ -22,6 +22,10 @@ export const borderText : NestedCSSProperties = {
     textShadow: ''
 }
 
+export const popArtShadow : NestedCSSProperties = {
+    boxShadow: '0 0 0 3px #fff, 0 0 0 6px #000, 5px 4px 0 6px #000'
+}
+
 export const speechBubble : NestedCSSProperties = {
     position: 'relative',
     borderRadius: '50%',

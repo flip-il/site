@@ -6,9 +6,9 @@ import { style } from 'typestyle'
 import { titleToAnchor } from '../helpers'
 
 import venueImage from '../../public/MTALogo.jpg'
-import { baseFont, speechBubble } from '../style-helpers'
+import { baseFont, popArtShadow, speechBubble } from '../style-helpers'
 
-const imageClass = style({maxWidth: '90vw'}, speechBubble)
+const imageClass = style({maxWidth: '90vw'}, speechBubble, popArtShadow)
 const venueClass = style({textAlign: 'center', fontSize: '1.5em', position: 'relative'}, baseFont)
 const mapClass = style({border: 0})
 

@@ -16,7 +16,7 @@ export const TeamListUnshuffled : TeamMember[] = [
     {
         portrait: yoav,
         name: 'Yoav Luft',
-        bio: 'Monadial Person'
+        bio: ''
     },
     {
         portrait: memberMcMemberface,
