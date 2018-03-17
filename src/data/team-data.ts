@@ -4,13 +4,13 @@ export type TeamMember = Person
 
 import memberMcMemberface from '../../public/team/member_mcmemberface.jpg'
 import yoav from '../../public/team/yoav.png'
-import yardena from '../../public/team/yardena.jpeg'
-import guy from '../../public/team/guy.jpeg'
-import adi from '../../public/team/adi.jpeg'
-import gadi from '../../public/team/gadi.jpeg'
-import netta from '../../public/team/netta.jpeg'
-import noga from '../../public/team/noga.jpeg'
-import shani from '../../public/team/shani.jpeg'
+import yardena from '../../public/team/yardena.jpg'
+import guy from '../../public/team/guy.jpg'
+import adi from '../../public/team/adi.jpg'
+import gadi from '../../public/team/gadi.jpg'
+import netta from '../../public/team/netta.jpg'
+import noga from '../../public/team/noga.jpg'
+import shani from '../../public/team/shani.jpg'
 
 export const TeamListUnshuffled : TeamMember[] = [
     {

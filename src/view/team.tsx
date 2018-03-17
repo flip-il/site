@@ -13,7 +13,7 @@ const autoWidthClass = style({width: 'auto'})
 
 export default function team(state : AppState) : VNode {
     return (
-        <div id={titleToAnchor('team')}>
+        <div id={titleToAnchor('Team')}>
             <h1>The Team:</h1>
             <div className={container}>
                 {TeamMembers.map((member, index) => TeamMember(member, state.team[index], index))}

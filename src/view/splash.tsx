@@ -55,7 +55,7 @@ export default function splash(): VNode {
     const overviewClass = style(h2Class, { fontSize: '1.5rem'}, baseFont)
 
     return (
-        <div id={titleToAnchor('FLIP')}>
+        <div id={titleToAnchor('About')}>
             <div className={splashImageClass}>
             </div>
             <div className={subtitleClass}>
