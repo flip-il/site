@@ -10,7 +10,7 @@ import { baseFont, popArtShadow, speechBubble } from '../style-helpers'
 
 const imageClass = style({maxWidth: '90vw'}, speechBubble, popArtShadow)
 const venueClass = style({textAlign: 'center', fontSize: '1.5em', position: 'relative'}, baseFont)
-const mapClass = style({border: 0})
+const mapClass = style({border: 0, marginTop: '0.5rem'})
 
 export default function Venue() : VNode {
     return (

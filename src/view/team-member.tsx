@@ -78,11 +78,12 @@ export default function TeamMember(teamMember : TeamMember,
     const teamMemberImageClass = style({
         borderRadius: '50%',
         height: '150px',
+        width: '150px',
+        objectFit: 'cover',
         boxShadow: '0 0 0 3px #fff, 0 0 0 6px #000, 5px 4px 0 6px #000',
         cursor: 'pointer'
     }, speechBubble, {
         $nest: {
-
             '&::after': {
                 content: `'X'`
             }
@@ -91,6 +92,7 @@ export default function TeamMember(teamMember : TeamMember,
 
     const teamMemberClass = style({
         flexBasis: '28%',
+        margin: '0.5rem',
         $nest: {
             [`&:hover .${teamMemberNameClass}`]: {
                 color: 'moccasin'
@@ -99,7 +101,7 @@ export default function TeamMember(teamMember : TeamMember,
                 boxShadow: '0 0 0 3px moccasin, 0 0 0 6px #000, 5px 4px 0 6px #000'
             }
         }
-    }, csstips.horizontal, csstips.centerCenter)
+    }, csstips.horizontal, csstips.aroundJustified, csstips.center)
 
     const teamMemberInfo = style(csstips.vertical)
 

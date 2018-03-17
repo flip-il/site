@@ -6,6 +6,7 @@ import * as csstips from 'csstips'
 import { titleToAnchor } from '../helpers'
 import { SponsorData, SponsorsData } from '../data/sponsors-data'
 import Sponsor from './sponsor'
+import { baseFont } from '../style-helpers'
 
 const container = style(csstips.horizontal, csstips.wrap, csstips.centerJustified, csstips.horizontallyCenterChildren, csstips.aroundJustified)
 
@@ -24,6 +25,12 @@ export default function sponsors(state : AppState) : VNode {
             <h2>Partners</h2>
             <div className={container}>
                 {sponsorGroups['Partner'].map((sponsor : SponsorData, i : number) => Sponsor(sponsor, i))}
+            </div>
+            <h2><a href='/sponsors.pdf'>Become a Sponsor!</a></h2>
+            <div className={container}>
+                <p className={style(baseFont)}>
+                    Contact us at <a href='mailto:sponsors@flip-il.org'>sponsors@flip-il.org</a>
+                </p>
             </div>
         </div>
     )

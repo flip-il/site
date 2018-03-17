@@ -95,6 +95,7 @@ module.exports = createConfig([
                 {from: 'public/data.json'},
                 {from: 'public/opengraph.png', to: 'opengraph.png'},
                 {from: 'public/code-of-conduct.pdf', to: 'code-of-conduct.pdf'},
+                {from: 'public/Sponsors.pdf', to: 'Sponsors.pdf'},
             ])
         ])
     ])
