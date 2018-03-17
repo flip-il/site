@@ -66,7 +66,7 @@ function view(state$: Stream<AppState>): Stream<VNode> {
                          {codeOfConduct()}
                          {venue()}
                          {sponsors(state)}
-                         {footer()}
+                         {/*{footer()}*/}
                      </div>
                  </div>
         )
