@@ -5,7 +5,7 @@ import { AppData } from '../data'
 import { style } from 'typestyle'
 import { titleToAnchor } from '../helpers'
 
-import venueImage from '../../public/MTALogo.jpg'
+import venueImage from '../../public/sponsors/MTALogo.jpg'
 import { baseFont, popArtShadow, speechBubble } from '../style-helpers'
 
 const imageClass = style({maxWidth: '90vw'}, speechBubble, popArtShadow)

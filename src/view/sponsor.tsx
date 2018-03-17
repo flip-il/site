@@ -39,7 +39,7 @@ export default function Sponsor(sponsor : SponsorData,
     const sponsorName = style({
         margin: '2rem 0 0 2rem',
         cursor: 'pointer',
-        display: 'inline-block'
+        display: 'block'
     }, baseFont)
 
     const sponsorLogo = {

@@ -1,12 +1,12 @@
-import xs, {Stream} from 'xstream'
-import {VNode, DOMSource} from '@cycle/dom'
-import {StateSource} from 'cycle-onionify'
+import xs, { Stream } from 'xstream'
+import { VNode, DOMSource } from '@cycle/dom'
+import { StateSource } from 'cycle-onionify'
 
-import {style} from 'typestyle'
+import { style } from 'typestyle'
 import * as csstips from 'csstips'
 
-import {Sources, Sinks} from './interfaces'
-import {AppState, Reducer, initialState} from './state'
+import { Sources, Sinks } from './interfaces'
+import { AppState, Reducer, initialState } from './state'
 
 import eventIntent from './intent/event-intent'
 import teamIntent from './intent/team-intent'
@@ -23,51 +23,52 @@ import backgroundLeft from '../public/bg-l.png'
 import backgroundRight from '../public/bg-r.png'
 import sponsors from './view/sponsors'
 
-export type AppSources = Sources & { onion: StateSource<AppState> }
-export type AppSinks = Sinks & { onion: Stream<Reducer> }
+export type AppSources = Sources & { onion : StateSource<AppState> }
+export type AppSinks = Sinks & { onion : Stream<Reducer> }
 
-export function App(sources: AppSources): AppSinks {
-    const action$: Stream<Reducer> = intent(sources.DOM)
-    const vdom$: Stream<VNode> = view(sources.onion.state$)
+export function App(sources : AppSources) : AppSinks {
+    const action$ : Stream<Reducer> = intent(sources.DOM)
+    const vdom$ : Stream<VNode> = view(sources.onion.state$)
 
     return {
-        DOM:   vdom$,
+        DOM: vdom$,
         onion: action$
     }
 }
 
-function intent(DOM: DOMSource): Stream<Reducer> {
-    const init$: Stream<Reducer> = xs.of<Reducer>(initialState)
-    const eventExpansion$: Stream<Reducer> = eventIntent(DOM)
-    const teamExpansion$: Stream<Reducer> = teamIntent(DOM)
+function intent(DOM : DOMSource) : Stream<Reducer> {
+    const init$ : Stream<Reducer> = xs.of<Reducer>(initialState)
+    const eventExpansion$ : Stream<Reducer> = eventIntent(DOM)
+    const teamExpansion$ : Stream<Reducer> = teamIntent(DOM)
 
     return xs.merge(init$, eventExpansion$, teamExpansion$)
 }
 
-function view(state$: Stream<AppState>): Stream<VNode> {
+function view(state$ : Stream<AppState>) : Stream<VNode> {
     const siteBackground = {
-        paddingTop: '55px',
+        paddingTop: '55px'
     }
 
     const topContainerClass = style(csstips.fillParent, csstips.vertical, siteBackground)
     const contentContainerClass = style(csstips.flex, {
         overflowY: 'auto',
         paddingLeft: '5vh',
-        paddingRight: '5vh'
+        paddingRight: '5vh',
+        paddingBottom: '40px'
     })
     return state$
         .map(state =>
-                 <div className={topContainerClass}>
-                     {topBar(state)}
-                     <div className={contentContainerClass}>
-                         {splash()}
-                         {team(state)}
-                         {agenda(state)}
-                         {codeOfConduct()}
-                         {venue()}
-                         {sponsors(state)}
-                         {/*{footer()}*/}
-                     </div>
-                 </div>
+            <div className={topContainerClass}>
+                {topBar(state)}
+                <div className={contentContainerClass}>
+                    {splash()}
+                    {team(state)}
+                    {agenda(state)}
+                    {codeOfConduct()}
+                    {venue()}
+                    {sponsors(state)}
+                    {/*{footer()}*/}
+                </div>
+            </div>
         )
 }

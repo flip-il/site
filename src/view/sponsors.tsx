@@ -16,7 +16,11 @@ const sponsorGroups : { [index : string] : SponsorData[] } = SponsorsData.reduce
 export default function sponsors(state : AppState) : VNode {
     return (
         <div id={titleToAnchor('Sponsors')}>
-            <h1>Our Sponsors</h1>
+            <h1>Our Sponsors &amp; Partners</h1>
+            <h2>Silver Sponsors</h2>
+            <div className={container}>
+                {sponsorGroups['Silver'].map((sponsor : SponsorData, i : number) => Sponsor(sponsor, i))}
+            </div>
             <h2>Partners</h2>
             <div className={container}>
                 {sponsorGroups['Partner'].map((sponsor : SponsorData, i : number) => Sponsor(sponsor, i))}
