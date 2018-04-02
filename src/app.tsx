@@ -17,7 +17,6 @@ import agenda from './view/agenda'
 import venue from './view/venue'
 import team from './view/team'
 import footer from './view/footer'
-import codeOfConduct from './view/code-of-conduct'
 
 import backgroundLeft from '../public/bg-l.png'
 import backgroundRight from '../public/bg-r.png'
@@ -51,10 +50,7 @@ function view(state$ : Stream<AppState>) : Stream<VNode> {
 
     const topContainerClass = style(csstips.fillParent, csstips.vertical, siteBackground)
     const contentContainerClass = style(csstips.flex, {
-        overflowY: 'auto',
-        paddingLeft: '5vh',
-        paddingRight: '5vh',
-        paddingBottom: '40px'
+        overflowY: 'auto'
     })
     return state$
         .map(state =>
@@ -62,12 +58,11 @@ function view(state$ : Stream<AppState>) : Stream<VNode> {
                 {topBar(state)}
                 <div className={contentContainerClass}>
                     {splash()}
+                    {/*agenda(state)*/}
+                    {/*venue()*/}
+                    {sponsors()}
                     {team(state)}
-                    {agenda(state)}
-                    {codeOfConduct()}
-                    {venue()}
-                    {sponsors(state)}
-                    {/*{footer()}*/}
+                    {footer()}
                 </div>
             </div>
         )

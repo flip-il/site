@@ -1,5 +1,4 @@
 import { VNode } from '@cycle/dom'
-import { AppState } from '../state'
 
 import { style } from 'typestyle'
 import * as csstips from 'csstips'
@@ -14,13 +13,17 @@ const add = (obj : { [index : string] : SponsorData[] }, sponsor : SponsorData) 
     Object.assign({}, obj, {[sponsor.sponsorType]: [...(obj[sponsor.sponsorType] || []), sponsor]})
 const sponsorGroups : { [index : string] : SponsorData[] } = SponsorsData.reduce((coll, sponsor) => add(coll, sponsor), {})
 
-export default function sponsors(state : AppState) : VNode {
+export default function sponsors() : VNode {
     return (
         <div id={titleToAnchor('Sponsors')}>
             <h1>Our Sponsors &amp; Partners</h1>
             <h2>Silver Sponsors</h2>
             <div className={container}>
                 {sponsorGroups['Silver'].map((sponsor : SponsorData, i : number) => Sponsor(sponsor, i))}
+            </div>
+            <h2>Bronze Sponsors</h2>
+            <div className={container}>
+                {sponsorGroups['Bronze'].map((sponsor : SponsorData, i : number) => Sponsor(sponsor, i))}
             </div>
             <h2>Partners</h2>
             <div className={container}>

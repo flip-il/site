@@ -5,7 +5,6 @@ import { classes, style } from 'typestyle'
 import { baseFont, speechBubble } from '../style-helpers'
 import { SponsorData, SponsorType } from '../data/sponsors-data'
 
-
 function eventAnimationStateToClass(state : EventAnimationStates) : string {
 
     const baseStyle = {
@@ -85,9 +84,8 @@ export default function Sponsor(sponsor : SponsorData,
 
     return (
         <div className={classes('sponsor', sponsorClass)} data-sponsorindex={index.toString()}>
-            <a href={sponsor.link} target="_blank">
+            <a href={sponsor.link} target='_blank'>
                 <img className={sponsorLogoClass(sponsor.sponsorType)} src={sponsor.logo}/>
-                <p className={sponsorName}>{sponsor.name}</p>
             </a>
         </div>
     )
