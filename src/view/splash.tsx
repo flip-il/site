@@ -35,6 +35,15 @@ export default function splash() : VNode {
         maxWidth: '1000px',
         animation: `${pulsateKeyframes} 3s infinite`
     }, popArtShadow)
+    const venueClass = style({
+        textAlign: 'center',
+        fontSize: '2em',
+        fontFamily: 'Bangers',
+        margin: '0 auto',
+        marginTop: '50px',
+        maxWidth: '1000px',
+        $nest: {a: {textDecoration: 'none'}}
+    }, popArtShadow)
     const subtitleContainerClass = style({
         margin: 'auto',
         flex: 1
@@ -68,6 +77,9 @@ export default function splash() : VNode {
                     </div>
                     <div className={dateClass}>
                         {AppData['About'].date}
+                    </div>
+                    <div className={venueClass}>
+                        <a href={'https://goo.gl/maps/s793M3zGxzK2'}>Academic College Tel-Aviv-Yafo, Tel Aviv</a>
                     </div>
                 </div>
             </div>
