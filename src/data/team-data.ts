@@ -16,47 +16,56 @@ export const TeamListUnshuffled : TeamMember[] = [
     {
         portrait: yoav,
         name: 'Yoav Luft',
-        bio: ''
+        bio: '',
+        linkedInUrl: 'https://www.linkedin.com/in/yoav-luft-28751418/'
     },
     {
         portrait: memberMcMemberface,
         name: 'Daniel Khankin',
-        bio: ''
+        bio: '',
+        linkedInUrl: 'https://www.linkedin.com/in/daniel-khankin-6b2589108/'
     },
     {
         portrait: guy,
         name: 'Guy Rozen',
-        bio: ''
+        bio: '',
+        linkedInUrl: 'https://www.linkedin.com/in/guy-rozen/'
     },
     {
         portrait: yardena,
         name: 'Yardena Meiman',
-        bio: ''
+        bio: '',
+        linkedInUrl: 'https://www.linkedin.com/in/ymeymann/'
     },
     {
         portrait: gadi,
         name: 'Gadi Aharoni',
-        bio: ''
+        bio: '',
+        linkedInUrl: 'https://www.linkedin.com/in/gadi-aharoni-1bb45/'
     },
     {
         portrait: adi,
         name: 'Adi Polak',
-        bio: ''
+        bio: '',
+        linkedInUrl: 'https://www.linkedin.com/in/adi-polak-68548365/'
     },
     {
         portrait: shani,
         name: 'Shani Margulis',
-        bio: ''
+        bio: '',
+        linkedInUrl: 'https://www.linkedin.com/in/shani-margulis-9b369882/'
     },
     {
         portrait: netta,
         name: 'Netta Bondi',
-        bio: ''
+        bio: '',
+        linkedInUrl: 'https://www.linkedin.com/in/netta-b-7b6a2148/'
     },
     {
         portrait: noga,
         name: 'Noga Rotman',
-        bio: ''
+        bio: '',
+        linkedInUrl: 'https://www.linkedin.com/in/noga-h-rotman/'
     }
 ]
 

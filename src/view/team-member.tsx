@@ -1,5 +1,4 @@
 import {VNode} from '@cycle/dom'
-import {AppState} from '../state'
 import {possibleStates as EventAnimationStates} from '../state'
 import {TeamMember} from '../data/team-data'
 import * as csstips from 'csstips'
@@ -93,6 +92,8 @@ export default function TeamMember(teamMember : TeamMember,
     const teamMemberClass = style({
         flexBasis: '28%',
         margin: '0.5rem',
+        textDecoration: 'none',
+        display: 'inline-block',
         $nest: {
             [`&:hover .${teamMemberNameClass}`]: {
                 color: 'moccasin'
@@ -106,12 +107,12 @@ export default function TeamMember(teamMember : TeamMember,
     const teamMemberInfo = style(csstips.vertical)
 
     return (
-        <div className={classes('team-member', teamMemberClass)} data-teammemberindex={index.toString()}>
+        <a target='_blank' href={teamMember.linkedInUrl} className={classes('team-member', teamMemberClass)} data-teammemberindex={index.toString()}>
             <img className={teamMemberImageClass} src={teamMember.portrait}/>
             <div className={teamMemberInfo}>
                 <p className={teamMemberNameClass}>{teamMember.name}</p>
                 <p className={eventAnimationStateToClass(teamMemberState)}>{teamMember.bio}</p>
             </div>
-        </div>
+        </a>
     )
 }
