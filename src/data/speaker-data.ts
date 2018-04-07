@@ -8,7 +8,8 @@ export const SpeakerList : Speaker[] = [
   {
     portrait: speakerMcSpeakerface,
     name: 'Speaker McSpeakerface',
-    bio: 'Speaker always felt like he had a lot of things to say, and he is going to say all of those things at you.'
+    bio: 'Speaker always felt like he had a lot of things to say, and he is going to say all of those things at you.',
+    linkedInUrl: ''
   }
 ]
 
