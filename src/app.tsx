@@ -21,6 +21,7 @@ import footer from './view/footer'
 import backgroundLeft from '../public/bg-l.png'
 import backgroundRight from '../public/bg-r.png'
 import sponsors from './view/sponsors'
+import tickets from './view/tickets'
 
 export type AppSources = Sources & { onion : StateSource<AppState> }
 export type AppSinks = Sinks & { onion : Stream<Reducer> }
@@ -58,6 +59,7 @@ function view(state$ : Stream<AppState>) : Stream<VNode> {
                 {topBar(state)}
                 <div className={contentContainerClass}>
                     {splash()}
+                    {tickets()}
                     {/*agenda(state)*/}
                     {/*venue()*/}
                     {sponsors()}
