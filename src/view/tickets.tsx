@@ -15,16 +15,23 @@ const container = style(
     csstips.flex10
 )
 
+const borderRadius = '45px'
+
 const ticketContainer = style({
-    borderRadius: '25%',
+    borderRadius: borderRadius,
     // border: '10px solid white',
     boxShadow: '0 0 0 10px #fff, 0 0 0 13px #000, 12px 11px 0 13px #000',
     textDecoration: 'none',
-    marginLeft: '25px',
-    marginRight: '25px',
+    margin: '25px',
     $nest: {
         '*': {
             textDecoration: 'none'
+        },
+        'a': {
+            height: '100%',
+            width: '100%',
+            borderRadius: borderRadius,
+            display: 'inline-block'
         },
         '&:hover': {
             $nest: {
@@ -40,23 +47,23 @@ const ticketContainer = style({
     }
 }, csstips.flex3)
 const ticketUnavailable = style({
-    boxShadow: '0 0 0 10px lightgrey, 0 0 0 13px #000, 12px 11px 0 13px #000',
+    boxShadow: '0 0 0 10px #bbb, 0 0 0 13px #000, 12px 11px 0 13px #000',
     cursor: 'default',
     $nest: {
         '*': {
-            color: 'lightgrey',
+            color: '#bbb',
             cursor: 'default'
         },
         '&:hover': {
             $nest: {
                 'h1': {
-                    color: 'lightgrey ! important'
+                    color: '#aaa ! important'
                 },
                 'h2': {
-                    color: 'lightgrey ! important'
+                    color: '#aaa ! important'
                 }
             },
-            boxShadow: '0 0 0 10px grey, 0 0 0 13px #000, 12px 11px 0 13px #000'
+            boxShadow: '0 0 0 10px #aaa, 0 0 0 13px #000, 12px 11px 0 13px #000'
         }
     }
 })

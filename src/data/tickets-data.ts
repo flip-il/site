@@ -26,7 +26,7 @@ export const ticketsList : TicketsData =
             title: 'FLIP Conference Tickets',
             priceILS: 200,
             purchaseLink: 'https://ti.to/hamakor/functional-programming/with/9jfikm3t-tg',
-            comment: 'Available until July 9th, 23:00 IST',
+            comment: 'Sale starts on May 21st; Available until July 9th, 23:00 IST',
             shouldDisplay: true,
             available: false
         },
