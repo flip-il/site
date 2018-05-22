@@ -11,8 +11,7 @@ export default function footer() : VNode {
     const footerClass = style(csstips.horizontal, {
         width: '100%',
         backgroundColor: 'black',
-        padding: '0.5em',
-        marginTop: '60px'
+        padding: '0.5em'
     })
     const cycleJSClass = style({width: '26px', height: '26px', verticalAlign: 'bottom'})
     const typescriptClass = cycleJSClass

@@ -49,9 +49,19 @@ function view(state$ : Stream<AppState>) : Stream<VNode> {
         paddingTop: '55px'
     }
 
+    // const topContainerClass = style(csstips.fillParent, csstips.vertical, siteBackground)
     const topContainerClass = style(csstips.fillParent, csstips.vertical, siteBackground)
-    const contentContainerClass = style(csstips.flex, {
-        overflowY: 'auto'
+    const contentContainerClass = style(csstips.vertical, {
+        overflowY: 'auto',
+        $nest: {
+            '&>:not(:last-child)': {
+                paddingTop: '4em',
+                paddingBottom: '4em'
+            },
+            '&>:not(:last-child):nth-child(even)': {
+                background: 'rgba(20, 178, 219, 0.5)'
+            }
+        }
     })
     return state$
         .map(state =>

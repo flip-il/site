@@ -1,10 +1,10 @@
-import {VNode} from '@cycle/dom'
-import {AppState} from '../state'
+import { VNode } from '@cycle/dom'
+import { AppState } from '../state'
 import TeamMembers from '../data/team-data'
 
-import {style} from 'typestyle'
+import { style } from 'typestyle'
 import * as csstips from 'csstips'
-import {titleToAnchor} from '../helpers'
+import { titleToAnchor } from '../helpers'
 
 import TeamMember from './team-member'
 

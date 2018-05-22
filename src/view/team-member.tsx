@@ -1,11 +1,10 @@
-import {VNode} from '@cycle/dom'
-import {possibleStates as EventAnimationStates} from '../state'
-import {TeamMember} from '../data/team-data'
+import { VNode } from '@cycle/dom'
+import {possibleStates as EventAnimationStates } from '../state'
+import { TeamMember } from '../data/team-data'
 import * as csstips from 'csstips'
 
-import {classes, style, keyframes} from 'typestyle'
-import {baseFont, speechBubble} from '../style-helpers'
-
+import { classes, style, keyframes } from 'typestyle'
+import { baseFont, speechBubble } from '../style-helpers'
 
 function eventAnimationStateToClass(state : EventAnimationStates) : string {
     const expandKeyframes = keyframes({
@@ -69,7 +68,6 @@ export default function TeamMember(teamMember : TeamMember,
                                    teamMemberState : EventAnimationStates,
                                    index : number) : VNode {
     const teamMemberNameClass = style({
-        margin: '2rem 0 0 2rem',
         cursor: 'pointer',
         display: 'inline-block'
     }, baseFont)
@@ -108,10 +106,9 @@ export default function TeamMember(teamMember : TeamMember,
 
     return (
         <a target='_blank' href={teamMember.linkedInUrl} className={classes('team-member', teamMemberClass)} data-teammemberindex={index.toString()}>
-            <img className={teamMemberImageClass} src={teamMember.portrait}/>
             <div className={teamMemberInfo}>
+                <img className={teamMemberImageClass} src={teamMember.portrait}/>
                 <p className={teamMemberNameClass}>{teamMember.name}</p>
-                <p className={eventAnimationStateToClass(teamMemberState)}>{teamMember.bio}</p>
             </div>
         </a>
     )
