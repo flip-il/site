@@ -66,7 +66,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       {
         id: 1,
         title: 'The Math Behind Functional Languages (HE)',
-        description: '',
+        description: 'Explaining functional programming concepts we use daily such as type-classes, semi-groups and monoids.',
         room: 'Class X',
         speakers: [Speakers['dvir faivel']]
       }]
@@ -123,12 +123,116 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       }]
     },
     {
-      startTime: '11:00',
-      endTime: '11:15',
+      startTime: '12:00',
+      endTime: '12:30',
       events: [{
         id: 1,
-        title: 'CROSS ROOM EVENT! ZOMG!!!'
+        title: 'Contributing to the F# compiler (He)',
+        shortDescription: true,
+        description: 'How I contribute to the F# compiler and had fun!',
+        room: 'Auditorium',
+        speakers: [Speakers['avi avni']]
+      }, {
+        id: 2,
+        title: 'Workshop Continues',
+        room: 'Class X'
       }]
+    },
+    {
+      startTime: '12:30',
+      endTime: '14:00',
+      events: [{
+        id: 1,
+        title: 'Lunch',
+        room: undefined
+      }]
+    },
+    {
+      startTime: '14:00',
+      endTime: '14:15',
+      events: [{
+        id: 1,
+        title: 'Functional Programming is for Everyone (Lightning Talk)',
+        room: 'Auditorium',
+        shortDescription: true,
+        description: 'Functional programming is enjoying spot lights and mainstream attention in the last few years. Yet very few companies in Israel are actually practicing functional programming. In this talk I’ll suggest few possible explanations and opportunities I see to make functional programming catch fire.',
+        speakers: [Speakers['sharon shmorak']]
+      }]
+    },
+    {
+      startTime: '14:15',
+      endTime: '14:30',
+      events: [{
+        id: 1,
+        title: 'Why Choosing Functional Programming for Doing DevOps',
+        room: 'Auditorium',
+        shortDescription: true,
+        description: 'Creator of NGS, a domain specific language for systems engineering tasks, speaks about unique combination of functional features in NGS and how they fit the design and the purpose of the language',
+        speakers: [Speakers['ilya sher']]
+      }]
+    },
+    {
+      startTime: '14:30',
+      endTime: '15:00',
+      events: [{
+        id: 1,
+        title: 'Elm from a Business Perspective',
+        room: 'Auditorium',
+        shortDescription: true,
+        description: 'In Gizra, we run an unusual stack that helps us reach blazing fast websites - Drupal runs our backends, Elm in the front, and most recently Yesod (a Haskell framework).\n' +
+        '\n' +
+        'There’s a certain mindset in choosing these technologies - it’s about the idea of “correctness”; making sure we can move quickly without breaking stuff.\n' +
+        '\n' +
+        'In this session, I’ll explain in depth about this mindset both from the development perspective, and the business one.',
+        speakers: [Speakers['amitai burstein']]
+      }]
+    },
+    {
+      startTime: '15:00',
+      endTime: '15:30',
+      events: [{
+        id: 1,
+        title: '5 Ways to Improve Performance of Your Java/Kotlin App Using Functional Programming',
+        room: 'Auditorium',
+        shortDescription: true,
+        description: 'Learn 5 Functional Programming paradigms (state, referential transparency ...) to improve any Java/Kotlin based app',
+        speakers: [Speakers['boris farber']]
+      }, {
+        id: 2,
+        title: 'Functional APIs with Absinthe GraphQL',
+        room: 'Class X',
+        shortDescription: true,
+        description: 'Absinthe is a GraphQL toolkit for Elixir-based Phoenix web framework. This talk will discuss Absinthe itself, as well as various patterns of designing GraphQL APIs with it.',
+        speakers: [Speakers['zvi avraham']]
+      }]
+    },
+    {
+      startTime: '15:30',
+      endTime: '16:00',
+      events: [{
+        id: 1,
+        title: 'Short Break'
+      }]
+    },
+    {
+      startTime: '16:00',
+      endTime: '16:30',
+      events: [
+        {
+          id: 1,
+          title: 'You Can Be Groovy',
+          room: 'Auditorium',
+          shortDescription: true,
+          description: 'Groovy, the JVM\'s underdog, is a functional top dog',
+          speakers: [Speakers['noam tenne']]
+        },
+        {
+          id: 2,
+          title: 'Make it Clean - Workshop',
+          room: 'Class X',
+          speakers: [Speakers['adi polak']]
+        }
+      ]
     }
   ]
 }
