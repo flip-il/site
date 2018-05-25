@@ -6,6 +6,7 @@ import speakerMcSpeakerface from '../../public/speakers/speaker_mcspeakerface.jp
 import itamarRavid from '../../public/speakers/itamar_ravid.jpg'
 import dvirFaivel from '../../public/speakers/dvir_faivel.png'
 import yaronWittenstein from '../../public/speakers/Yaron.jpg'
+import michaelSnoyman from '../../public/speakers/snoyman.jpg'
 
 export const SpeakerList : Speaker[] = [
   {
@@ -17,6 +18,7 @@ export const SpeakerList : Speaker[] = [
   {
     portrait: dvirFaivel,
     name: 'Dvir Faivel',
+    shortBio: true,
     bio: 'Interested in Scala, functional programming, big data, parallel and distributed programming, and more geeky stuff',
     linkedInUrl: ''
   },
@@ -24,6 +26,19 @@ export const SpeakerList : Speaker[] = [
     portrait: yaronWittenstein,
     name: 'Yaron Wittenstein',
     bio: 'Creating software is my passion, my most loved programming languages are Ruby and Elixir and I only code in vim :)',
+    linkedInUrl: ''
+  },
+  {
+    portrait: michaelSnoyman,
+    name: 'Michael Snoyman',
+    bio: 'Michael Snoyman is the founder and lead developer of multiple Haskell open source projects, including Yesod, Conduit, Stack, and Stackage. His main interests are creating developer-friendly, high performance libraries that minimize bugs. Michael is VP of Engineering at FP Complete, where he focuses on using Haskell and modern devops to help projects make it to market faster and with fewer bugs.',
+    linkedInUrl: ''
+  },
+  {
+    portrait: speakerMcSpeakerface,
+    name: 'Daniel Szmulewicz',
+    shortBio: true,
+    bio: 'Software craftsman / Entrepreneur / Founder of the Clojure user group in Israel',
     linkedInUrl: ''
   },
   {

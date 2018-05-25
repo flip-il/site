@@ -9,22 +9,37 @@ import { amountToWidthClass, inverseWidthClass } from '../helpers'
 
 import EventView from './event'
 
-const transparentBlackBackground = {background: 'rgba(0,0,0,.2)'}
+const transparentBlackBackground = { background: 'rgba(0,0,0,.2)' }
 const agendaSlotClass = style({}, transparentBlackBackground)
-const slotWideEventColumnClass = style({width: '99%'})
+const slotWideEventColumnClass = style({ width: '99%' })
 
-function TimeSlotEvents<T>(roomNames : T[], timeslot : TimeSlot<T>, state : AppState) : JSX.Element[] {
-  const eventCellClass = style({
+function eventCellClass<T>(eventsInRoom : Event<T>[]) : string {
+  const defaultCellClass = style({
     textAlign: 'center',
-    padding: '20px 40px', 
+    padding: '20px 40px',
     verticalAlign: 'top'
   })
+
+  const centeredCellClass = style({
+    textAlign: 'center',
+    padding: '20px 40px',
+    verticalAlign: 'middle'
+  })
+
+  if (eventsInRoom.length === 1 && eventsInRoom[0].speakers === undefined) {
+    return centeredCellClass
+  }
+
+  return defaultCellClass
+}
+
+function TimeSlotEvents<T>(roomNames : T[], timeslot : TimeSlot<T>, state : AppState) : JSX.Element[] {
 
   const multiSpeakersClass = style(csstips.horizontal, csstips.wrap)
 
   if (timeslot.events.every(event => event.room === undefined)) {
     return (
-      [<td className={classes(eventCellClass, slotWideEventColumnClass)} colSpan={roomNames.length}>
+      [<td className={classes(eventCellClass(timeslot.events), slotWideEventColumnClass)} colSpan={roomNames.length}>
         {timeslot.events.map(event => EventView(event, state))}
       </td>]
     )
@@ -39,14 +54,14 @@ function TimeSlotEvents<T>(roomNames : T[], timeslot : TimeSlot<T>, state : AppS
 
       if (roomNames.length > 1) {
         return (
-          <td className={classes(eventCellClass, amountToWidthClass(roomNames.length))}>
+          <td className={classes(eventCellClass(roomEvents), amountToWidthClass(roomNames.length))}>
             {roomEvents.map(event => EventView(event, state, inverseWidthClass(roomNames.length)))}
           </td>
         )
       }
       else {
         return (
-          <td className={classes(eventCellClass, amountToWidthClass(roomNames.length))}>
+          <td className={classes(eventCellClass(roomEvents), amountToWidthClass(roomNames.length))}>
             <div className={multiSpeakersClass}>
               {roomEvents.map(event => EventView(event, state, inverseWidthClass(roomNames.length)))}
             </div>
@@ -66,7 +81,7 @@ function timeslotTimespan(timeslot : TimeSlot<any>) : string {
 }
 
 function TimeSlot<T>(roomNames : T[], timeslot : TimeSlot<T>, state : AppState) : VNode {
-  const timeSlotClass = style({whiteSpace: 'nowrap', verticalAlign: 'top', padding: '10px'})
+  const timeSlotClass = style({ whiteSpace: 'nowrap', verticalAlign: 'top', padding: '10px' })
 
   return (
     <tr className={agendaSlotClass}>
@@ -84,11 +99,11 @@ export default function SpecificAgenda<T>(agendaData : Agenda<T>, state : AppSta
     tableLayout: 'fixed'
   })
 
-  const tableHeadClass = style(transparentBlackBackground, {fontFamily: 'Bangers', fontSize: '2em', letterSpacing: '4px'})
-  const tableHeadTimeCellClass = style(transparentBlackBackground, {textAlign: 'left', padding: '10px'})
+  const tableHeadClass = style(transparentBlackBackground, { fontFamily: 'Bangers', fontSize: '2em', letterSpacing: '4px' })
+  const tableHeadTimeCellClass = style(transparentBlackBackground, { textAlign: 'left', padding: '10px' })
 
   const tableHeadCellWidthClass = amountToWidthClass(agendaData.roomNames.length)
-  const tableHeadCellClass = style(transparentBlackBackground, {textAlign: 'center', padding: '10px'})
+  const tableHeadCellClass = style(transparentBlackBackground, { textAlign: 'center', padding: '10px' })
 
   return (
     <table className={agendaTableClass}>

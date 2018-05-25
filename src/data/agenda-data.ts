@@ -46,8 +46,9 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       endTime: '10:00',
       events: [{
         id: 1,
-        title: 'Turning High-level Functional Programs into Low-level Programs with Improved Performance',
-        description: '',
+        shortDescription: true,
+        title: 'Keynote',
+        description: 'Turning High-level Functional Programs into Low-level Programs with Improved Performance',
         room: 'Auditorium',
         speakers: [Speakers['dr. jeremy yallop']]
       }]
@@ -83,10 +84,42 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       },
       {
         id: 1,
-        title: 'The Math Behind Functional Languages (HE)',
-        description: '',
+        title: 'Workshop - Haskell from the Inside Out',
+        shortDescription: true,
+        description: 'Learn the basic assumptions of Haskell that lead to its many distinguishing features',
         room: 'Class X',
-        speakers: [Speakers['dvir faivel']]
+        speakers: [Speakers['michael snoyman']]
+      }]
+    },
+    {
+      startTime: '11:00',
+      endTime: '11:30',
+      events: [{
+        id: 1,
+        title: 'Short Break',
+        room: 'Auditorium'
+      },
+      {
+        id: 1,
+        title: 'Workshop Continues',
+        room: 'Class X'
+      }]
+    },
+    {
+      startTime: '11:30',
+      endTime: '12:00',
+      events: [{
+        id: 1,
+        title: 'Practical functional programming with Clojure',
+        shortDescription: true,
+        description: 'Impure, practical functional',
+        room: 'Auditorium',
+        speakers: [Speakers['daniel szmulewicz']]
+      },
+      {
+        id: 1,
+        title: 'Workshop Continues',
+        room: 'Class X'
       }]
     },
     {
