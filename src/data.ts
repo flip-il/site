@@ -1,7 +1,7 @@
-import {AboutData} from './data/about-data'
-import {Agenda, AgendaDataGathering, AgendaDataOpening, AgendaDataTalks} from './data/agenda-data'
-import {SponsorData, SponsorsData} from './data/sponsors-data'
-import {default as TeamMembers, TeamMember} from './data/team-data'
+import { AboutData } from './data/about-data'
+import { Agenda, AgendaDataGathering, AgendaDataTalks } from './data/agenda-data'
+import { SponsorData, SponsorsData } from './data/sponsors-data'
+import {default as TeamMembers, TeamMember } from './data/team-data'
 import { TicketsData, ticketsList } from './data/tickets-data'
 
 type AppDataType = {
@@ -20,7 +20,6 @@ export const AppData : AppDataType = {
     'Tickets': ticketsList,
     'Agenda':   {
         'Gathering': AgendaDataGathering,
-        'Opening':   AgendaDataOpening,
         'Talks':     AgendaDataTalks
     },
     'Sponsors': SponsorsData,

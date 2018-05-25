@@ -5,19 +5,19 @@ import { Speaker as SpeakerType } from '../data/speaker-data'
 import { VNode } from '@cycle/dom'
 import { classes, style, keyframes } from 'typestyle'
 import * as csstips from 'csstips'
-import { amountToWidthClass} from '../helpers'
+import { amountToWidthClass } from '../helpers'
 
 import Speaker from './speaker'
 import expandImage from '../../public/expand-down.png'
 
 function eventAnimationStateToDesciptionClass(state : EventAnimationStates) : string {
   const expandKeyframes = keyframes({
-    '0%': {maxHeight: '1.3em'},
+    '0%': {maxHeight: '1.35em'},
     '100%': {maxHeight: '75em'}
   })
 
   const collapseKeyframes = keyframes({
-    '100%': {maxHeight: '1.3em'},
+    '100%': {maxHeight: '1.35em'},
     '0%': {maxHeight: '75em'}
   })
 
@@ -30,14 +30,14 @@ function eventAnimationStateToDesciptionClass(state : EventAnimationStates) : st
 
   const collapsedClass = style({
     textAlign: 'center',
-    height: '1.3em',
+    height: '1.35em',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
     overflow: 'hidden'
   }, baseStyle)
   const expandingClass = style({
     textAlign: 'justify',
-    maxHeight: '1.3em',
+    maxHeight: '1.35em',
     overflow: 'hidden',
     animationName: expandKeyframes,
     animationDuration: '0.5s',
@@ -125,6 +125,40 @@ function Speakers(speakers : SpeakerType[], speakerStates : EventAnimationStates
   )
 }
 
+function TitleAndDescription(title : string, titleClass : string, description : string | undefined, shortDescription : boolean | undefined,
+  eventDescriptionState : EventAnimationStates) : VNode {
+
+  let titleHighlightClass = undefined
+  if (description && shortDescription !== true) {
+    titleHighlightClass = style({
+      $nest: {
+        [`&:hover .${titleClass}`]: {
+          color: 'moccasin'
+        }
+      }
+    })
+  }
+
+  if (!description) {
+      return (<div className={classes('event-description', titleHighlightClass)}>
+        <p className={titleClass}>{title}</p>
+      </div>)
+  }
+
+  if (shortDescription) {
+    return (<div className={classes('event-description', titleHighlightClass)}>
+      <p className={titleClass}>{title}</p>
+      <p>{description}</p>
+    </div>)
+  }
+
+  return (<div className={classes('event-description', titleHighlightClass)}>
+    <p className={titleClass}>{title}</p>
+    <p className={eventAnimationStateToDesciptionClass(eventDescriptionState)}>{description}</p>
+    <img className={eventAnimationStateToExpanderClass(eventDescriptionState)} src={expandImage}></img>
+  </div>)
+}
+
 export default function Event<T>(event : Event<T>, state : AppState, widthClass : string = '') : VNode {
   const eventMarginClass = style({margin: '0 auto'})
 
@@ -142,30 +176,14 @@ export default function Event<T>(event : Event<T>, state : AppState, widthClass 
       letterSpacing: '1px',
       margin: '0',
       textAlign: 'center',
-      textShadow: '4px 4px 0 #000, -1px -1px 0 black, 0 -1px 0 black, -1px 0 0 black',
       cursor: 'pointer'
-    })
-  }
-
-  let titleHighlightClass = undefined
-  if (event.description) {
-    titleHighlightClass = style({
-      $nest: {
-        [`&:hover .${titleClass}`]: {
-          color: 'moccasin'
-        }
-      }
     })
   }
 
   return (
     <div className={classes(eventMarginClass, widthClass)} data-eventid={event.id.toString()}>
       {event.speakers ? Speakers(event.speakers, state.events[event.id].speakerStates) : undefined}
-      <div className={classes('event-description', titleHighlightClass)}>
-        <p className={titleClass}>{event.title}</p>
-        {event.description ? <p className={eventAnimationStateToDesciptionClass(state.events[event.id].descriptionState)}>{event.description}</p> : undefined}
-        {event.description ? <img className={eventAnimationStateToExpanderClass(state.events[event.id].descriptionState)} src={expandImage}></img> : undefined}
-      </div>
+      {TitleAndDescription(event.title, titleClass, event.description, event.shortDescription, state.events[event.id].descriptionState)}
     </div>
   )
 }

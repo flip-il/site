@@ -1,12 +1,12 @@
 import { Speaker, Speakers } from './speaker-data'
 
-type RoomsGathering = 'A Room'
-type RoomsOpening = 'THE Room'
-type RoomsTalks = 'R1' | 'R2' | 'R3'
+type RoomsGathering = 'The gather zone'
+type RoomsTalks = 'Auditorium' | 'Class X'
 
 export type Event<T> = {
   id : number
   title : string
+  shortDescription? : boolean
   room? : T
   speakers? : Speaker[]
   description? : string
@@ -24,81 +24,69 @@ export type Agenda<T> = {
 }
 
 export const AgendaDataGathering : Agenda<RoomsGathering> = {
-  roomNames: ['A Room'],
+  roomNames: ['The gather zone'],
   timeSlots: [
     {
       startTime: '08:00',
       endTime: '09:00',
       events: [{
         id: 1,
-        title: 'Congregation commences',
-        room: 'A Room'
-      }]
-    }
-  ]
-}
-
-export const AgendaDataOpening : Agenda<RoomsOpening> = {
-  roomNames: ['THE Room'],
-  timeSlots: [
-    {
-      startTime: '09:00',
-      endTime: '09:15',
-      events: [{
-        id: 1,
-        title: 'Opening words',
-        room: 'THE Room',
-        speakers: [Speakers['speaker mcspeakerface']]
-      }]
-    },
-    {
-      startTime: '09:15',
-      endTime: '10:05',
-      events: [{
-        id: 1,
-        title: 'Keynote - leveraging key notes',
-        description: 'Look, this is just a sample description, I\'m not really sure what you were expecting to find here.',
-        room: 'THE Room',
-        speakers: [Speakers['speaker mcspeakerface']]
-      }]
-    },
-    {
-      startTime: '10:05',
-      endTime: '10:15',
-      events: [{
-        id: 1,
-        title: 'Break (10m)'
+        title: 'Registration',
+        room: 'The gather zone'
       }]
     }
   ]
 }
 
 export const AgendaDataTalks : Agenda<RoomsTalks> = {
-  roomNames: ['R1', 'R2', 'R3'],
+  roomNames: ['Auditorium', 'Class X'],
   timeSlots: [
     {
-      startTime: '10:15',
+      startTime: '09:00',
+      endTime: '10:00',
+      events: [{
+        id: 1,
+        title: 'Turning High-level Functional Programs into Low-level Programs with Improved Performance',
+        description: '',
+        room: 'Auditorium',
+        speakers: [Speakers['dr. jeremy yallop']]
+      }]
+    },
+    {
+      startTime: '10:00',
+      endTime: '10:30',
+      events: [{
+        id: 1,
+        title: 'Boring Usecases for Exciting Types',
+        description: 'Codensity! Indexed state! Zipper comonad! What are these words and co-words? There\'s lots of jargon in functional programming, and without context, it seems pretty academic. In this talk, I\'ll show a few lesser known functional constructs and how they can be put to work in a day-to-day usecase.',
+        room: 'Auditorium',
+        speakers: [Speakers['itamar ravid']]
+      },
+      {
+        id: 1,
+        title: 'The Math Behind Functional Languages (HE)',
+        description: '',
+        room: 'Class X',
+        speakers: [Speakers['dvir faivel']]
+      }]
+    },
+    {
+      startTime: '10:30',
       endTime: '11:00',
       events: [{
         id: 1,
-        title: 'First room event',
-        description: 'These events are here so that we remember how to set up the data to display events in multiple rooms. This is all very exciting.',
-        room: 'R1',
-        speakers: [Speakers['speaker mcspeakerface']]
+        title: 'Spoxy Proxy',
+        shortDescription: true,
+        description: 'Creating a smart proxy with a short-lived internal cache using Elixir',
+        room: 'Auditorium',
+        speakers: [Speakers['yaron wittenstein']]
       },
       {
         id: 1,
-        title: 'Room #2, electric bugaloo!',
-        description: 'This would be a good opportunity to say that I don\'t really know what a bugaloo is.',
-        room: 'R2',
-        speakers: [Speakers['speaker mcspeakerface']]
-      },
-      {
-        id: 1,
-        title: 'Room #3, arrow in the knee',
-        description: 'You should really give Skyrim a spin if you have not gotten around to it somehow. It is a really immersive experience.',
-        room: 'R3',
-        speakers: [Speakers['speaker mcspeakerface']]
+        title: 'The Math Behind Functional Languages (HE)',
+        description: '',
+        room: 'Class X',
+        speakers: [Speakers['dvir faivel']]
       }]
     },
     {
@@ -124,5 +112,4 @@ function GenerateEventIDs<T>(agendaData : Agenda<T>) : void {
 }
 
 GenerateEventIDs(AgendaDataGathering)
-GenerateEventIDs(AgendaDataOpening)
 GenerateEventIDs(AgendaDataTalks)

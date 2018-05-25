@@ -1,4 +1,4 @@
-import {NestedCSSProperties} from 'typestyle/lib/types'
+import { NestedCSSProperties } from 'typestyle/lib/types'
 
 export const h2Class : NestedCSSProperties = {
     padding: '40px',

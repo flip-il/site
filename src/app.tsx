@@ -70,7 +70,7 @@ function view(state$ : Stream<AppState>) : Stream<VNode> {
                 <div className={contentContainerClass}>
                     {splash()}
                     {tickets()}
-                    {/*agenda(state)*/}
+                    {agenda(state)}
                     {/*venue()*/}
                     {sponsors()}
                     {team(state)}

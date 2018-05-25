@@ -1,12 +1,12 @@
-import {VNode} from '@cycle/dom'
-import {AppState} from '../state'
-import {AppData} from '../data'
+import { VNode } from '@cycle/dom'
+import { AppState } from '../state'
+import { AppData } from '../data'
 
-import {style, keyframes} from 'typestyle'
+import { style, keyframes } from 'typestyle'
 import * as csstips from 'csstips'
-import {titleToAnchor} from '../helpers'
+import { titleToAnchor } from '../helpers'
 import splashImage from '../../public/flip-logo-splash.png'
-import {baseFont, h2Class} from '../style-helpers'
+import { baseFont, h2Class } from '../style-helpers'
 
 export default function splash() : VNode {
     const pulsateKeyframes = keyframes({
@@ -85,9 +85,6 @@ export default function splash() : VNode {
             </div>
             <div className={overviewClass}>
                 {AppData['About'].overview}
-            </div>
-            <div className={signupClass}>
-                <a href='https://goo.gl/forms/hRzJCFvVNZ5Dd5qn1'>Call for Papers is Open!</a>
             </div>
         </div>
     )
