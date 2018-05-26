@@ -66,7 +66,8 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       {
         id: 1,
         title: 'The Math Behind Functional Languages (HE)',
-        description: 'Explaining functional programming concepts we use daily such as type-classes, semi-groups and monoids.',
+        shortDescription: true,
+        description: 'Explaining functional programming concepts we use daily such as type-classes, semi-groups and monoids',
         room: 'Class X',
         speakers: [Speakers['dvir faivel']]
       }]
@@ -129,7 +130,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         id: 1,
         title: 'Contributing to the F# compiler (He)',
         shortDescription: true,
-        description: 'How I contribute to the F# compiler and had fun!',
+        description: 'How I contributed to the F# compiler and had fun!',
         room: 'Auditorium',
         speakers: [Speakers['avi avni']]
       }, {
@@ -143,8 +144,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       endTime: '14:00',
       events: [{
         id: 1,
-        title: 'Lunch',
-        room: undefined
+        title: 'Lunch'
       }]
     },
     {
@@ -154,8 +154,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         id: 1,
         title: 'Functional Programming is for Everyone (Lightning Talk)',
         room: 'Auditorium',
-        shortDescription: true,
-        description: 'Functional programming is enjoying spot lights and mainstream attention in the last few years. Yet very few companies in Israel are actually practicing functional programming. In this talk I’ll suggest few possible explanations and opportunities I see to make functional programming catch fire.',
+        description: 'Functional programming is enjoying mainstream attention in the last few years, yet very few companies in Israel are actually practicing functional programming. In this talk I’ll suggest a few possible explanations and present opportunities I see to make functional programming catch fire.',
         speakers: [Speakers['sharon shmorak']]
       }]
     },
@@ -164,10 +163,9 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       endTime: '14:30',
       events: [{
         id: 1,
-        title: 'Why Choosing Functional Programming for Doing DevOps',
+        title: 'Why Choosing Functional Programming for Doing DevOps (Lightning Talk)',
         room: 'Auditorium',
-        shortDescription: true,
-        description: 'Creator of NGS, a domain specific language for systems engineering tasks, speaks about unique combination of functional features in NGS and how they fit the design and the purpose of the language',
+        description: 'Creator of NGS, a domain specific language for systems engineering tasks, speaks about the unique combination of functional features in NGS and how they fit the design and the purpose of the language.',
         speakers: [Speakers['ilya sher']]
       }]
     },
@@ -178,12 +176,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         id: 1,
         title: 'Elm from a Business Perspective',
         room: 'Auditorium',
-        shortDescription: true,
-        description: 'In Gizra, we run an unusual stack that helps us reach blazing fast websites - Drupal runs our backends, Elm in the front, and most recently Yesod (a Haskell framework).\n' +
-        '\n' +
-        'There’s a certain mindset in choosing these technologies - it’s about the idea of “correctness”; making sure we can move quickly without breaking stuff.\n' +
-        '\n' +
-        'In this session, I’ll explain in depth about this mindset both from the development perspective, and the business one.',
+        description: 'In Gizra, we run an unusual stack that helps us reach blazing fast websites - Drupal runs our backends, Elm in the front, and most recently Yesod (a Haskell framework). There’s a certain mindset in choosing these technologies - it’s about the idea of “correctness”; making sure we can move quickly without breaking stuff. In this session, I’ll provide an in depth explanation about this mindset both from the development perspective, and the business one.',
         speakers: [Speakers['amitai burstein']]
       }]
     },
@@ -192,10 +185,10 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       endTime: '15:30',
       events: [{
         id: 1,
-        title: '5 Ways to Improve Performance of Your Java/Kotlin App Using Functional Programming',
+        title: '5 Ways to Improve Performance of Your Java/Kotlin App',
         room: 'Auditorium',
         shortDescription: true,
-        description: 'Learn 5 Functional Programming paradigms (state, referential transparency ...) to improve any Java/Kotlin based app',
+        description: 'Learn 5 Functional Programming paradigms (state, referential transparency...) to improve any Java/Kotlin based app',
         speakers: [Speakers['boris farber']]
       }, {
         id: 2,
@@ -217,22 +210,20 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
     {
       startTime: '16:00',
       endTime: '16:30',
-      events: [
-        {
-          id: 1,
-          title: 'You Can Be Groovy',
-          room: 'Auditorium',
-          shortDescription: true,
-          description: 'Groovy, the JVM\'s underdog, is a functional top dog',
-          speakers: [Speakers['noam tenne']]
-        },
-        {
-          id: 2,
-          title: 'Make it Clean - Workshop',
-          room: 'Class X',
-          speakers: [Speakers['adi polak']]
-        }
-      ]
+      events: [{
+        id: 1,
+        title: 'You Can Be Groovy',
+        room: 'Auditorium',
+        shortDescription: true,
+        description: 'Groovy, the JVM\'s underdog, is a functional top dog',
+        speakers: [Speakers['noam tenne']]
+      },
+      {
+        id: 2,
+        title: 'Make it Clean - Workshop',
+        room: 'Class X',
+        speakers: [Speakers['adi polak']]
+      }]
     },
     {
       startTime: '16:30',
@@ -242,9 +233,10 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         title: 'Functional Reactive Programming Using RxJS (HE)',
         room: 'Auditorium',
         shortDescription: true,
-        description: 'Overview and best practices for using Functional Reactive Programming (FRP) in front end development.',
+        description: 'Overview and best practices for using Functional Reactive Programming (FRP) in front end development',
         speakers: [Speakers['ziv perry']]
-      }, {
+      },
+      {
         id: 2,
         title: 'Workshop Continues',
         room: 'Class X'
@@ -257,7 +249,8 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         id: 1,
         title: 'Short Break',
         room: 'Auditorium'
-      }, {
+      },
+      {
         id: 2,
         title: 'Workshop Continues',
         room: 'Class X'
@@ -270,12 +263,10 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         id: 1,
         title: 'Purely Functional Games',
         room: 'Auditorium',
-        shortDescription: true,
-        description: 'Games are often considered to be inherently mutable, event driven programs, and are usually considered ""a bad fit"" for functional programming.\n' +
-        'Is that really the case? If not, how would a game written in purely functional style look like?\n' +
-        'In this talk we\'ll try to provide answers to these questions.',
+        description: 'Games are often considered to be inherently mutable, event driven programs, and are usually considered a "bad fit" for functional programming. Is that really the case? If not, how would a game written in a purely functional style look like? In this talk we\'ll try to provide answers to these questions.',
         speakers: [Speakers['gil mizrahi']]
-      }, {
+      },
+      {
         id: 2,
         title: 'Workshop Continues',
         room: 'Class X'
@@ -288,10 +279,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         id: 1,
         title: 'Make Your Own Functional Programmers',
         room: 'Auditorium',
-        shortDescription: true,
-        description: 'Recruiting functional programmers is hard. Have you considered making your own?\n' +
-        'Let\'s talk about how to build an effective training program that will quickly transform any die-hard Java-loving and design-patterns-chanting imperative programmer, without requiring too much of your lead engineer\'s time.\n' +
-        '',
+        description: 'Recruiting functional programmers is hard. Have you considered making your own? Let\'s talk about how to build an effective training program that will quickly transform any die-hard Java-loving and design-patterns-chanting imperative programmer, without requiring too much of your lead engineer\'s time.',
         speakers: [Speakers['hila noga']]
       }]
     },

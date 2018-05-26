@@ -55,17 +55,13 @@ export const SpeakerList : Speaker[] = [
   {
     portrait: itamarRavid,
     name: 'Itamar Ravid',
-    bio: 'Itamar is a freelance software engineer. He’s been working with all facets of software development for over a decade - from data infrastructure, through CI/CD processes to backend development. His current interests include in microservice architectures and stream processing systems on the JVM. Itamar is a functional programming addict and contributes to several open-source projects in the Scala ecosystem, such as the Cats library and ENSIME.',
+    bio: 'Itamar is a freelance software engineer. He’s been working with all facets of software development for over a decade - from data infrastructure, through CI/CD processes to backend development. His current interests include microservice architectures and stream processing systems on the JVM. Itamar is a functional programming addict and contributes to several open-source projects in the Scala ecosystem, such as the Cats library and ENSIME.',
     linkedInUrl: ''
   },
   {
     portrait: aviAvni,
     name: 'Avi Avni',
-    bio: 'Avi Avni is a Consultant and Instructor at SELA Group, With 7+ years of industry experience.\n' +
-    'Avi specializes in design and development of large scale applications and diagnosing memory and CPU performance issues. \n' +
-    'Avi has 2+ years experience as a team leader. \n' +
-    'Avi is a contributor to several open source projects like F# Compiler, CoreCLR, Roslyn, ClrMD.\n' +
-    'Avi is also a Neo4j Certified Professional',
+    bio: 'Avi Avni is a Consultant and Instructor at SELA Group, With 7+ years of industry experience. Avi specializes in design and development of large scale applications and diagnosing memory and CPU performance issues. Avi has 2+ years experience as a team leader. Avi is a contributor to several open source projects like F# Compiler, CoreCLR, Roslyn, ClrMD. Avi is also a Neo4j Certified Professional.',
     linkedInUrl: 'https://www.linkedin.com/in/avi-avni/'
   },
   {
@@ -119,14 +115,14 @@ export const SpeakerList : Speaker[] = [
   {
     portrait: gilMizrahi,
     name: 'Gil Mizrahi',
+    shortBio: true,
     bio: 'A Haskell developer by day and night, I enjoy implementing interesting applications in purely functional style.',
     linkedInUrl: 'https://gilmi.me'
   },
   {
     portrait: hilaNoga,
     name: 'Hila Noga',
-    bio: 'CTO, Entrepreneur\n' +
-    'Hila has 14 years of experience building software, training software builders, and managing teams that build software. Up until recently, she was the CTO of Hello Heart, where she fell in love with functional programming while building the company\'s back end using Scala. These days she is flying under the radar and working on her own project.',
+    bio: 'Hila has 14 years of experience building software, training software builders, and managing teams that build software. Up until recently, she was the CTO of Hello Heart, where she fell in love with functional programming while building the company\'s back end using Scala. These days she is flying under the radar and working on her own project.',
     linkedInUrl: 'https://www.linkedin.com/in/hilanoga/'
   }
 ]

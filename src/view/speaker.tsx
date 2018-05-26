@@ -3,9 +3,9 @@ import { AppState } from '../state'
 import { possibleStates as EventAnimationStates } from '../state'
 import { Speaker } from '../data/speaker-data'
 
-import { classes, style, keyframes } from 'typestyle'
+import { classes, style, keyframes, types } from 'typestyle'
 
-function eventAnimationStateToClass(state : EventAnimationStates) : string {
+function eventAnimationStateToClass(state : EventAnimationStates, shortBio : boolean | undefined) : string {
   const expandKeyframes = keyframes({
     '0%': {maxHeight: '0'},
     '100%': {maxHeight: '75em'}
@@ -22,42 +22,56 @@ function eventAnimationStateToClass(state : EventAnimationStates) : string {
     cursor: 'pointer'
   }
 
+  type textAlign = types.CSSGlobalValues | 'start' | 'end' | 'left' | 'right' | 'center' | 'justify' | 'justify-all' | 'match-parent';
+
   const collapsedClass = style({
     textAlign: 'justify',
     height: '0',
     overflow: 'hidden'
   }, baseStyle)
-  const expandingClass = style({
-    textAlign: 'justify',
+
+  const expandingStyle = {
+    textAlign: 'justify' as textAlign,
     maxHeight: '0',
-    overflow: 'hidden',
+    overflow: 'hidden' as types.CSSOverflow,
     animationName: expandKeyframes,
     animationDuration: '0.5s',
     animationTimingFunction: 'cubic-bezier(1,0,1,0)'
-  }, baseStyle)
+  }
+  const expandingClass = style(expandingStyle, baseStyle)
+  const expandingClassShort = style(expandingStyle, baseStyle, { textAlign: 'center' })
+
   const expandedClass = style({
     textAlign: 'justify',
     maxHeight: '75em',
     overflow: 'hidden'
   }, baseStyle)
-  const collapsingClass = style({
-    textAlign: 'justify',
+  const expandedClassShort = style({
+    textAlign: 'center',
     maxHeight: '75em',
-    overflow: 'hidden',
+    overflow: 'hidden'
+  }, baseStyle)
+
+  const collapsingStyle = {
+    textAlign: 'justify' as textAlign,
+    maxHeight: '75em',
+    overflow: 'hidden' as types.CSSOverflow,
     animationName: collapseKeyframes,
     animationDuration: '0.5s',
     animationTimingFunction: 'cubic-bezier(0,1,0,1)'
-  }, baseStyle)
+  }
+  const collapsingClass = style(collapsingStyle, baseStyle)
+  const collapsingClassShort = style(collapsingStyle, baseStyle, { textAlign: 'center' })
 
   switch (state) {
     case 'collapsed':
       return collapsedClass
     case 'expanding':
-      return expandingClass
+      return shortBio ? expandingClassShort : expandingClass
     case 'collapsing':
-      return collapsingClass
+      return shortBio ? collapsingClassShort : collapsingClass
     case 'expanded':
-      return expandedClass
+      return shortBio ? expandedClassShort : expandedClass
     default:
       throw 'impossible state'
   }
@@ -102,7 +116,7 @@ export default function Speaker(speaker : Speaker, widthClass : string, speakerS
     <div className={classes('speaker', widthClass, speakerClass)} data-speakerindex={index.toString()}>
       <img className={speakerImageClass} src={speaker.portrait}/>
       <p className={speakerNameClass}>{speaker.name}</p>
-      <p className={eventAnimationStateToClass(speakerState)}>{speaker.bio}</p>
+      <p className={eventAnimationStateToClass(speakerState, speaker.shortBio)}>{speaker.bio}</p>
     </div>
   )
 }

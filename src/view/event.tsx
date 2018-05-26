@@ -22,7 +22,6 @@ function eventAnimationStateToDesciptionClass(state : EventAnimationStates) : st
   })
 
   const baseStyle = {
-    fontSize: '0.85em',
     lineHeight: '1.4em',
     cursor: 'pointer',
     marginBottom: 0
