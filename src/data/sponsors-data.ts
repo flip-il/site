@@ -2,6 +2,7 @@ import mtaLogo from '../../public/sponsors/MTALogo.jpg'
 import hamakorLogo from '../../public/sponsors/Hamakor_logo.png'
 import bigPanda from '../../public/sponsors/BP_Logo.png'
 import cycognito from '../../public/sponsors/CYC_logo_white.png'
+import sqream from '../../public/sponsors/sqream+technologies.png'
 
 export type SponsorType =
     'Gold' | 'Silver' | 'Bronze' | 'Partner'
@@ -37,5 +38,11 @@ export const SponsorsData : SponsorData[] = [
         logo: cycognito,
         sponsorType: 'Bronze',
         link: 'https://www.cycognito.com/'
+    },
+    {
+      name: 'SQream',
+      logo: sqream,
+      sponsorType: 'Bronze',
+      link: 'https://sqream.com/'
     }
 ]
