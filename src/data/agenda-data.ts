@@ -233,6 +233,75 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
           speakers: [Speakers['adi polak']]
         }
       ]
+    },
+    {
+      startTime: '16:30',
+      endTime: '17:00',
+      events: [{
+        id: 1,
+        title: 'Functional Reactive Programming Using RxJS (HE)',
+        room: 'Auditorium',
+        shortDescription: true,
+        description: 'Overview and best practices for using Functional Reactive Programming (FRP) in front end development.',
+        speakers: [Speakers['ziv perry']]
+      }, {
+        id: 2,
+        title: 'Workshop Continues',
+        room: 'Class X'
+      }]
+    },
+    {
+      startTime: '17:00',
+      endTime: '17:30',
+      events: [{
+        id: 1,
+        title: 'Short Break',
+        room: 'Auditorium'
+      }, {
+        id: 2,
+        title: 'Workshop Continues',
+        room: 'Class X'
+      }]
+    },
+    {
+      startTime: '17:30',
+      endTime: '18:00',
+      events: [{
+        id: 1,
+        title: 'Purely Functional Games',
+        room: 'Auditorium',
+        shortDescription: true,
+        description: 'Games are often considered to be inherently mutable, event driven programs, and are usually considered ""a bad fit"" for functional programming.\n' +
+        'Is that really the case? If not, how would a game written in purely functional style look like?\n' +
+        'In this talk we\'ll try to provide answers to these questions.',
+        speakers: [Speakers['gil mizrahi']]
+      }, {
+        id: 2,
+        title: 'Workshop Continues',
+        room: 'Class X'
+      }]
+    },
+    {
+      startTime: '18:00',
+      endTime: '18:45',
+      events: [{
+        id: 1,
+        title: 'Make Your Own Functional Programmers',
+        room: 'Auditorium',
+        shortDescription: true,
+        description: 'Recruiting functional programmers is hard. Have you considered making your own?\n' +
+        'Let\'s talk about how to build an effective training program that will quickly transform any die-hard Java-loving and design-patterns-chanting imperative programmer, without requiring too much of your lead engineer\'s time.\n' +
+        '',
+        speakers: [Speakers['hila noga']]
+      }]
+    },
+    {
+      startTime: '18:45',
+      endTime: '19:00',
+      events: [{
+        id: 1,
+        title: 'Closing Event'
+      }]
     }
   ]
 }

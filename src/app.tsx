@@ -69,8 +69,8 @@ function view(state$ : Stream<AppState>) : Stream<VNode> {
                 {topBar(state)}
                 <div className={contentContainerClass}>
                     {splash()}
-                    {tickets()}
                     {agenda(state)}
+                    {tickets()}
                     {/*venue()*/}
                     {sponsors()}
                     {team(state)}

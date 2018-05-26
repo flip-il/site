@@ -14,12 +14,12 @@ export const ticketsList : TicketsData =
     [
         {
             type: 'early-bird',
-            title: 'Early Bird Tickets',
+            title: 'Early Bird Tickets - Sold out!',
             priceILS: 120,
             purchaseLink: 'https://ti.to/hamakor/functional-programming/with/9jjirt8btxk',
-            comment: 'Limited Availability! Early bird tickets are available until May 21st, 23:00 IST',
+            comment: 'Early Bird Tickets Sale is Closed',
             shouldDisplay: true,
-            available: true
+            available: false
         },
         {
             type: 'regular',
@@ -28,7 +28,7 @@ export const ticketsList : TicketsData =
             purchaseLink: 'https://ti.to/hamakor/functional-programming/with/9jfikm3t-tg',
             comment: 'Sale starts on May 21st; Available until July 9th, 23:00 IST',
             shouldDisplay: true,
-            available: false
+            available: true
         },
         {
             type: 'discount',

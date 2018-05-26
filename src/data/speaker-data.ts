@@ -5,7 +5,7 @@ export type Speaker = Person
 import speakerMcSpeakerface from '../../public/speakers/speaker_mcspeakerface.jpg'
 import itamarRavid from '../../public/speakers/itamar_ravid.jpg'
 import dvirFaivel from '../../public/speakers/dvir_faivel.png'
-import yaronWittenstein from '../../public/speakers/Yaron.jpg'
+import yaronWittenstein from '../../public/speakers/yaron.jpg'
 import michaelSnoyman from '../../public/speakers/snoyman.jpg'
 import drYallop from '../../public/speakers/yallop.png'
 import danielSchmulewicz from '../../public/speakers/daniel_sch.jpg'
@@ -16,6 +16,8 @@ import borisFarber from '../../public/speakers/bfarber-2 BW.jpg'
 import zviAvraham from '../../public/speakers/zvi_photo.png'
 import noamTenne from '../../public/speakers/noam_tenne.jpg'
 import adiPolak from '../../public/team/adi.jpg'
+import gilMizrahi from '../../public/speakers/gil_mizrahi.png'
+import hilaNoga from '../../public/speakers/Hila BW.jpg'
 
 export const SpeakerList : Speaker[] = [
   {
@@ -107,6 +109,25 @@ export const SpeakerList : Speaker[] = [
     name: 'Adi Polak',
     bio: '',
     linkedInUrl: ''
+  },
+  {
+    portrait: speakerMcSpeakerface,
+    name: 'Ziv Perry',
+    bio: '',
+    linkedInUrl: 'https://www.linkedin.com/in/zivperry/'
+  },
+  {
+    portrait: gilMizrahi,
+    name: 'Gil Mizrahi',
+    bio: 'A Haskell developer by day and night, I enjoy implementing interesting applications in purely functional style.',
+    linkedInUrl: 'https://gilmi.me'
+  },
+  {
+    portrait: hilaNoga,
+    name: 'Hila Noga',
+    bio: 'CTO, Entrepreneur\n' +
+    'Hila has 14 years of experience building software, training software builders, and managing teams that build software. Up until recently, she was the CTO of Hello Heart, where she fell in love with functional programming while building the company\'s back end using Scala. These days she is flying under the radar and working on her own project.',
+    linkedInUrl: 'https://www.linkedin.com/in/hilanoga/'
   }
 ]
 
