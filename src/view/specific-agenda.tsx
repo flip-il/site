@@ -93,10 +93,12 @@ function TimeSlot<T>(roomNames : T[], timeslot : TimeSlot<T>, state : AppState) 
 
 export default function SpecificAgenda<T>(agendaData : Agenda<T>, state : AppState) : VNode {
   const agendaTableClass = style({
-    width: '100%',
+    width: '80%',
     borderCollapse: 'separate',
     borderSpacing: '0 10px',
-    tableLayout: 'fixed'
+    tableLayout: 'fixed',
+    marginLeft: 'auto',
+    marginRight: 'auto'
   })
 
   const tableHeadClass = style(transparentBlackBackground, { fontFamily: 'Bangers', fontSize: '2em', letterSpacing: '4px' })

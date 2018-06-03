@@ -29,7 +29,6 @@ export const SpeakerList : Speaker[] = [
   {
     portrait: dvirFaivel,
     name: 'Dvir Faivel',
-    shortBio: true,
     bio: 'Interested in Scala, functional programming, big data, parallel and distributed programming, and more geeky stuff',
     linkedInUrl: ''
   },
@@ -48,7 +47,6 @@ export const SpeakerList : Speaker[] = [
   {
     portrait: danielSchmulewicz,
     name: 'Daniel Szmulewicz',
-    shortBio: true,
     bio: 'Software craftsman / Entrepreneur / Founder of the Clojure user group in Israel',
     linkedInUrl: 'https://www.linkedin.com/in/danielszmulewicz/'
   },
@@ -103,8 +101,8 @@ export const SpeakerList : Speaker[] = [
   {
     portrait: adiPolak,
     name: 'Adi Polak',
-    bio: '',
-    linkedInUrl: ''
+    bio: 'Love to code, investigate problems, learn new frameworks and challenge myself. As part of my passion for challenges, I did an M.Sc where I majored in solving security problems using Machine learning.',
+    linkedInUrl: 'https://www.linkedin.com/in/adi-polak-68548365/'
   },
   {
     portrait: speakerMcSpeakerface,
@@ -115,7 +113,6 @@ export const SpeakerList : Speaker[] = [
   {
     portrait: gilMizrahi,
     name: 'Gil Mizrahi',
-    shortBio: true,
     bio: 'A Haskell developer by day and night, I enjoy implementing interesting applications in purely functional style.',
     linkedInUrl: 'https://gilmi.me'
   },

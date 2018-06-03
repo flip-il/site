@@ -222,6 +222,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         id: 2,
         title: 'Make it Clean - Workshop',
         room: 'Class X',
+        description: 'Can we find a way to write easy to understand, readable and fairly “clean” lambda expressions? This is a TOUGH question. Many experienced programmers which are new (or not...) to lambdas fail miserably. I’ve been trying to tackle this challenge in scala and today I will share with you how to CLEAN your scala code.',
         speakers: [Speakers['adi polak']]
       }]
     },
