@@ -24,7 +24,7 @@ export type Agenda<T> = {
 }
 
 export const AgendaDataGathering : Agenda<RoomsGathering> = {
-  roomNames: ['The gather zone'],
+  roomNames: ['Weston Building Ground Floor'],
   timeSlots: [
     {
       startTime: '08:00',
@@ -32,14 +32,14 @@ export const AgendaDataGathering : Agenda<RoomsGathering> = {
       events: [{
         id: 1,
         title: 'Registration',
-        room: 'The gather zone'
+        room: 'Weston Building Ground Floor'
       }]
     }
   ]
 }
 
 export const AgendaDataTalks : Agenda<RoomsTalks> = {
-  roomNames: ['Auditorium', 'Class X'],
+  roomNames: ['Auditorium', 'Class 008'],
   timeSlots: [
     {
       startTime: '09:00',
@@ -68,7 +68,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         title: 'The Math Behind Functional Languages (HE)',
         shortDescription: true,
         description: 'Explaining functional programming concepts we use daily such as type-classes, semi-groups and monoids',
-        room: 'Class X',
+        room: 'Class 008',
         speakers: [Speakers['dvir faivel']]
       }]
     },
@@ -88,7 +88,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         title: 'Workshop - Haskell from the Inside Out',
         shortDescription: true,
         description: 'Learn the basic assumptions of Haskell that lead to its many distinguishing features',
-        room: 'Class X',
+        room: 'Class 008',
         speakers: [Speakers['michael snoyman']]
       }]
     },
@@ -103,7 +103,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       {
         id: 1,
         title: 'Workshop Continues',
-        room: 'Class X'
+        room: 'Class 008'
       }]
     },
     {
@@ -120,7 +120,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       {
         id: 1,
         title: 'Workshop Continues',
-        room: 'Class X'
+        room: 'Class 008'
       }]
     },
     {
@@ -136,7 +136,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       }, {
         id: 2,
         title: 'Workshop Continues',
-        room: 'Class X'
+        room: 'Class 008'
       }]
     },
     {
@@ -193,7 +193,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       }, {
         id: 2,
         title: 'Functional APIs with Absinthe GraphQL',
-        room: 'Class X',
+        room: 'Class 008',
         shortDescription: true,
         description: 'Absinthe is a GraphQL toolkit for Elixir-based Phoenix web framework. This talk will discuss Absinthe itself, as well as various patterns of designing GraphQL APIs with it.',
         speakers: [Speakers['zvi avraham']]
@@ -221,7 +221,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       {
         id: 2,
         title: 'Make it Clean - Workshop',
-        room: 'Class X',
+        room: 'Class 008',
         description: 'Can we find a way to write easy to understand, readable and fairly “clean” lambda expressions? This is a TOUGH question. Many experienced programmers which are new (or not...) to lambdas fail miserably. I’ve been trying to tackle this challenge in scala and today I will share with you how to CLEAN your scala code.',
         speakers: [Speakers['adi polak']]
       }]
@@ -240,7 +240,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       {
         id: 2,
         title: 'Workshop Continues',
-        room: 'Class X'
+        room: 'Class 008'
       }]
     },
     {
@@ -254,7 +254,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       {
         id: 2,
         title: 'Workshop Continues',
-        room: 'Class X'
+        room: 'Class 008'
       }]
     },
     {
@@ -270,7 +270,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       {
         id: 2,
         title: 'Workshop Continues',
-        room: 'Class X'
+        room: 'Class 008'
       }]
     },
     {

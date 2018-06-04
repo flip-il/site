@@ -23,7 +23,11 @@ export const SpeakerList : Speaker[] = [
   {
     portrait: drYallop,
     name: 'Dr. Jeremy Yallop',
-    bio: 'This is where some bio information would go',
+    bio: `Jeremy Yallop is a Senior Research Associate & Affiliated Lecturer at
+      the University of Cambridge.  His interests are in the design and
+      implementation of programming languages, with a particular focus on
+      using multi-stage programming to combine high-level abstractions with
+      efficient execution`,
     linkedInUrl: ''
   },
   {
