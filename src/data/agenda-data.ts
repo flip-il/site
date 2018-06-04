@@ -1,7 +1,7 @@
 import { Speaker, Speakers } from './speaker-data'
 
-type RoomsGathering = 'The gather zone'
-type RoomsTalks = 'Auditorium' | 'Class X'
+type RoomsGathering = 'Weston Building Ground Floor'
+type RoomsTalks = 'Auditorium' | 'Class 008'
 
 export type Event<T> = {
   id : number
