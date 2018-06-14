@@ -18,6 +18,7 @@ import noamTenne from '../../public/speakers/noam_tenne.jpg'
 import adiPolak from '../../public/team/adi.jpg'
 import gilMizrahi from '../../public/speakers/gil_mizrahi.png'
 import hilaNoga from '../../public/speakers/Hila BW.jpg'
+import zivPerry from '../../public/speakers/ziv_perry.jpg'
 
 export const SpeakerList : Speaker[] = [
   {
@@ -109,9 +110,10 @@ export const SpeakerList : Speaker[] = [
     linkedInUrl: 'https://www.linkedin.com/in/adi-polak-68548365/'
   },
   {
-    portrait: speakerMcSpeakerface,
+    portrait: zivPerry,
     name: 'Ziv Perry',
-    bio: '',
+    bio: 'R&D Team leader at Binah.ai with more than 20 years of experience in system architecture and software engineering.\n' +
+    'Enthusiastic about converting multi-lines imperative code into one-liner-functional-expressions.',
     linkedInUrl: 'https://www.linkedin.com/in/zivperry/'
   },
   {

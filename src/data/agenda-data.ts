@@ -1,7 +1,10 @@
 import { Speaker, Speakers } from './speaker-data'
 
-type RoomsGathering = 'Weston Building Ground Floor'
-type RoomsTalks = 'Auditorium' | 'Class 008'
+type RoomsGathering = 'Fomento Building Ground Floor'
+const gatheringRoom : RoomsGathering = 'Fomento Building Ground Floor'
+type RoomsTalks = 'Fomento Auditorium' | 'Fomento Class 001'
+const auditorium : RoomsTalks = 'Fomento Auditorium'
+const classroom : RoomsTalks = 'Fomento Class 001'
 
 export type Event<T> = {
   id : number
@@ -24,7 +27,7 @@ export type Agenda<T> = {
 }
 
 export const AgendaDataGathering : Agenda<RoomsGathering> = {
-  roomNames: ['Weston Building Ground Floor'],
+  roomNames: [gatheringRoom],
   timeSlots: [
     {
       startTime: '08:00',
@@ -32,14 +35,14 @@ export const AgendaDataGathering : Agenda<RoomsGathering> = {
       events: [{
         id: 1,
         title: 'Registration',
-        room: 'Weston Building Ground Floor'
+        room: gatheringRoom
       }]
     }
   ]
 }
 
 export const AgendaDataTalks : Agenda<RoomsTalks> = {
-  roomNames: ['Auditorium', 'Class 008'],
+  roomNames: [auditorium, classroom],
   timeSlots: [
     {
       startTime: '09:00',
@@ -49,7 +52,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         shortDescription: true,
         title: 'Keynote',
         description: 'Turning High-level Functional Programs into Low-level Programs with Improved Performance',
-        room: 'Auditorium',
+        room: auditorium,
         speakers: [Speakers['dr. jeremy yallop']]
       }]
     },
@@ -60,7 +63,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         id: 1,
         title: 'Boring Usecases for Exciting Types',
         description: 'Codensity! Indexed state! Zipper comonad! What are these words and co-words? There\'s lots of jargon in functional programming, and without context, it seems pretty academic. In this talk, I\'ll show a few lesser known functional constructs and how they can be put to work in a day-to-day usecase.',
-        room: 'Auditorium',
+        room: auditorium,
         speakers: [Speakers['itamar ravid']]
       },
       {
@@ -68,7 +71,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         title: 'The Math Behind Functional Languages (HE)',
         shortDescription: true,
         description: 'Explaining functional programming concepts we use daily such as type-classes, semi-groups and monoids',
-        room: 'Class 008',
+        room: classroom,
         speakers: [Speakers['dvir faivel']]
       }]
     },
@@ -80,7 +83,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         title: 'Spoxy Proxy',
         shortDescription: true,
         description: 'Creating a smart proxy with a short-lived internal cache using Elixir',
-        room: 'Auditorium',
+        room: auditorium,
         speakers: [Speakers['yaron wittenstein']]
       },
       {
@@ -88,7 +91,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         title: 'Workshop - Haskell from the Inside Out',
         shortDescription: true,
         description: 'Learn the basic assumptions of Haskell that lead to its many distinguishing features',
-        room: 'Class 008',
+        room: classroom,
         speakers: [Speakers['michael snoyman']]
       }]
     },
@@ -98,12 +101,12 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       events: [{
         id: 1,
         title: 'Short Break',
-        room: 'Auditorium'
+        room: auditorium
       },
       {
         id: 1,
         title: 'Workshop Continues',
-        room: 'Class 008'
+        room: classroom
       }]
     },
     {
@@ -114,13 +117,13 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         title: 'Practical functional programming with Clojure',
         shortDescription: true,
         description: 'Impure, practical functional',
-        room: 'Auditorium',
+        room: auditorium,
         speakers: [Speakers['daniel szmulewicz']]
       },
       {
         id: 1,
         title: 'Workshop Continues',
-        room: 'Class 008'
+        room: classroom
       }]
     },
     {
@@ -131,12 +134,12 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         title: 'Contributing to the F# compiler (He)',
         shortDescription: true,
         description: 'How I contributed to the F# compiler and had fun!',
-        room: 'Auditorium',
+        room: auditorium,
         speakers: [Speakers['avi avni']]
       }, {
         id: 2,
         title: 'Workshop Continues',
-        room: 'Class 008'
+        room: classroom
       }]
     },
     {
@@ -153,7 +156,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       events: [{
         id: 1,
         title: 'Functional Programming is for Everyone (Lightning Talk)',
-        room: 'Auditorium',
+        room: auditorium,
         description: 'Functional programming is enjoying mainstream attention in the last few years, yet very few companies in Israel are actually practicing functional programming. In this talk I’ll suggest a few possible explanations and present opportunities I see to make functional programming catch fire.',
         speakers: [Speakers['sharon shmorak']]
       }]
@@ -164,7 +167,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       events: [{
         id: 1,
         title: 'Why Choosing Functional Programming for Doing DevOps (Lightning Talk)',
-        room: 'Auditorium',
+        room: auditorium,
         description: 'Creator of NGS, a domain specific language for systems engineering tasks, speaks about the unique combination of functional features in NGS and how they fit the design and the purpose of the language.',
         speakers: [Speakers['ilya sher']]
       }]
@@ -175,7 +178,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       events: [{
         id: 1,
         title: 'Elm from a Business Perspective',
-        room: 'Auditorium',
+        room: auditorium,
         description: 'In Gizra, we run an unusual stack that helps us reach blazing fast websites - Drupal runs our backends, Elm in the front, and most recently Yesod (a Haskell framework). There’s a certain mindset in choosing these technologies - it’s about the idea of “correctness”; making sure we can move quickly without breaking stuff. In this session, I’ll provide an in depth explanation about this mindset both from the development perspective, and the business one.',
         speakers: [Speakers['amitai burstein']]
       }]
@@ -186,14 +189,14 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       events: [{
         id: 1,
         title: '5 Ways to Improve Performance of Your Java/Kotlin App',
-        room: 'Auditorium',
+        room: auditorium,
         shortDescription: true,
         description: 'Learn 5 Functional Programming paradigms (state, referential transparency...) to improve any Java/Kotlin based app',
         speakers: [Speakers['boris farber']]
       }, {
         id: 2,
         title: 'Functional APIs with Absinthe GraphQL',
-        room: 'Class 008',
+        room: classroom,
         shortDescription: true,
         description: 'Absinthe is a GraphQL toolkit for Elixir-based Phoenix web framework. This talk will discuss Absinthe itself, as well as various patterns of designing GraphQL APIs with it.',
         speakers: [Speakers['zvi avraham']]
@@ -213,7 +216,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       events: [{
         id: 1,
         title: 'You Can Be Groovy',
-        room: 'Auditorium',
+        room: auditorium,
         shortDescription: true,
         description: 'Groovy, the JVM\'s underdog, is a functional top dog',
         speakers: [Speakers['noam tenne']]
@@ -221,7 +224,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       {
         id: 2,
         title: 'Make it Clean - Workshop',
-        room: 'Class 008',
+        room: classroom,
         description: 'Can we find a way to write easy to understand, readable and fairly “clean” lambda expressions? This is a TOUGH question. Many experienced programmers which are new (or not...) to lambdas fail miserably. I’ve been trying to tackle this challenge in scala and today I will share with you how to CLEAN your scala code.',
         speakers: [Speakers['adi polak']]
       }]
@@ -232,7 +235,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       events: [{
         id: 1,
         title: 'Functional Reactive Programming Using RxJS (HE)',
-        room: 'Auditorium',
+        room: auditorium,
         shortDescription: true,
         description: 'Overview and best practices for using Functional Reactive Programming (FRP) in front end development',
         speakers: [Speakers['ziv perry']]
@@ -240,7 +243,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       {
         id: 2,
         title: 'Workshop Continues',
-        room: 'Class 008'
+        room: classroom
       }]
     },
     {
@@ -249,12 +252,12 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       events: [{
         id: 1,
         title: 'Short Break',
-        room: 'Auditorium'
+        room: auditorium
       },
       {
         id: 2,
         title: 'Workshop Continues',
-        room: 'Class 008'
+        room: classroom
       }]
     },
     {
@@ -263,14 +266,14 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       events: [{
         id: 1,
         title: 'Purely Functional Games',
-        room: 'Auditorium',
+        room: auditorium,
         description: 'Games are often considered to be inherently mutable, event driven programs, and are usually considered a "bad fit" for functional programming. Is that really the case? If not, how would a game written in a purely functional style look like? In this talk we\'ll try to provide answers to these questions.',
         speakers: [Speakers['gil mizrahi']]
       },
       {
         id: 2,
         title: 'Workshop Continues',
-        room: 'Class 008'
+        room: classroom
       }]
     },
     {
@@ -279,7 +282,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       events: [{
         id: 1,
         title: 'Make Your Own Functional Programmers',
-        room: 'Auditorium',
+        room: auditorium,
         description: 'Recruiting functional programmers is hard. Have you considered making your own? Let\'s talk about how to build an effective training program that will quickly transform any die-hard Java-loving and design-patterns-chanting imperative programmer, without requiring too much of your lead engineer\'s time.',
         speakers: [Speakers['hila noga']]
       }]
