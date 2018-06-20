@@ -19,6 +19,7 @@ import adiPolak from '../../public/team/adi.jpg'
 import gilMizrahi from '../../public/speakers/gil_mizrahi.png'
 import hilaNoga from '../../public/speakers/Hila BW.jpg'
 import zivPerry from '../../public/speakers/ziv_perry.jpg'
+import ilyaSher from '../../public/speakers/ilya_sher.jpg'
 
 export const SpeakerList : Speaker[] = [
   {
@@ -74,7 +75,7 @@ export const SpeakerList : Speaker[] = [
     linkedInUrl: 'https://www.linkedin.com/in/sharon-shmorak-dafner-14a18438/'
   },
   {
-    portrait: speakerMcSpeakerface,
+    portrait: ilyaSher,
     name: 'Ilya Sher',
     bio: 'Systems and software engineer, professionally since 2001. Frustrated by the void, working on NGS, a domain specific language and a shell for systems engineering tasks.',
     linkedInUrl: 'https://www.linkedin.com/in/ilyasher'
