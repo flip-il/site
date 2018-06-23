@@ -116,7 +116,7 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
         id: 1,
         title: 'Practical functional programming with Clojure',
         shortDescription: true,
-        description: 'Impure, practical functional',
+        description: 'The natural programming style for Lisp is functional. One could argue that it stems from its DNA: the lambda calculus, of course, but also the original paper by John McCarthy which shows a purely functional system to compute algebraic expressions. However, the better known implementations of Lisp have all been impurely functional. In this talk, we will explain why and how Clojure is firmly entrenched in the functional mindset, imbued with the notion that side-effects are to be contained, and that our programs ought to be written with referential transparency in mind.',
         room: auditorium,
         speakers: [Speakers['daniel szmulewicz']]
       },

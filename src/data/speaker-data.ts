@@ -53,7 +53,7 @@ export const SpeakerList : Speaker[] = [
   {
     portrait: danielSchmulewicz,
     name: 'Daniel Szmulewicz',
-    bio: 'Software craftsman / Entrepreneur / Founder of the Clojure user group in Israel',
+    bio: 'Solo entrepreneur. Functional programmer. Closet philosopher. Emacs meshugge. Founder of the Clojure user group in Israel.',
     linkedInUrl: 'https://www.linkedin.com/in/danielszmulewicz/'
   },
   {
