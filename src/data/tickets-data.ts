@@ -35,10 +35,10 @@ export const ticketsList : TicketsData =
             title: 'Students / Service Personnel / Minors Discount Tickets',
             priceILS: 40,
             purchaseLink: 'https://ti.to/hamakor/functional-programming/with/guogpn72ooi',
-            comment: 'Available to students, soldiers in mandatory service, people under 18 or people in voluntary ' +
+            comment: 'Sold Out!\nAvailable to students, soldiers in mandatory service, people under 18 or people in voluntary ' +
             'service (Shnat Sherut) who pay for themselves. Ticket is only valid after confirmation of status.',
             shouldDisplay: true,
-            available: true
+            available: false
         },
         {
             type: 'last-minute',
