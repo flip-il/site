@@ -77,6 +77,10 @@ export default function Sponsor(sponsor : SponsorData,
                 return style({
                     height: '75px'
                 }, sponsorLogo, speechBubble)
+            case 'Prize':
+              return style({
+                height: '75px'
+              }, sponsorLogo, speechBubble)
             default:
                 return 'unreachable statement'
         }

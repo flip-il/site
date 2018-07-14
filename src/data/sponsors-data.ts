@@ -4,9 +4,11 @@ import bigPanda from '../../public/sponsors/BP_Logo.png'
 import cycognito from '../../public/sponsors/CYC_logo_white.png'
 import sqream from '../../public/sponsors/sqream+technologies.png'
 import akamai from '../../public/sponsors/akamai_logo.png'
+import zenProtocol from '../../public/sponsors/zen_protocol_white.png'
+import manning from '../../public/sponsors/Manninglogo_outline.png'
 
 export type SponsorType =
-    'Gold' | 'Silver' | 'Bronze' | 'Partner'
+    'Gold' | 'Silver' | 'Bronze' | 'Partner' | 'Prize'
 
 export type SponsorData = {
   name : string,
@@ -51,5 +53,17 @@ export const SponsorsData : SponsorData[] = [
     logo: akamai,
     sponsorType: 'Silver',
     link: 'https://www.akamai.com'
+  },
+  {
+    name: 'Zen Protocol',
+    logo: zenProtocol,
+    sponsorType: 'Silver',
+    link: 'https://www.zenprotocol.com/'
+  },
+  {
+    name: 'Manning Publications',
+    logo: manning,
+    sponsorType: 'Prize',
+    link: 'https://www.manning.com/'
   }
 ]

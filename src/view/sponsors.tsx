@@ -29,6 +29,10 @@ export default function sponsors() : VNode {
             <div className={container}>
                 {sponsorGroups['Partner'].map((sponsor : SponsorData, i : number) => Sponsor(sponsor, i))}
             </div>
+            <h2>Prize Sponsors</h2>
+            <div className={container}>
+              {sponsorGroups['Prize'].map((sponsor : SponsorData, i : number) => Sponsor(sponsor, i))}
+            </div>
             <h2><a href='/sponsors.pdf'>Become a Sponsor!</a></h2>
             <div className={container}>
                 <p className={style(baseFont)}>
