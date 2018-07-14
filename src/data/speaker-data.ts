@@ -20,6 +20,7 @@ import gilMizrahi from '../../public/speakers/gil_mizrahi.png'
 import hilaNoga from '../../public/speakers/Hila BW.jpg'
 import zivPerry from '../../public/speakers/ziv_perry.jpg'
 import ilyaSher from '../../public/speakers/ilya_sher.jpg'
+import asherManning from '../../public/speakers/asher_manning.jpg'
 
 export const SpeakerList : Speaker[] = [
   {
@@ -128,6 +129,12 @@ export const SpeakerList : Speaker[] = [
     name: 'Hila Noga',
     bio: 'Hila has 14 years of experience building software, training software builders, and managing teams that build software. Up until recently, she was the CTO of Hello Heart, where she fell in love with functional programming while building the company\'s back end using Scala. These days she is flying under the radar and working on her own project.',
     linkedInUrl: 'https://www.linkedin.com/in/hilanoga/'
+  },
+  {
+    portrait: asherManning,
+    name: 'Asher Manning',
+    bio: 'Formal methods developer at Zen Protocol, Asher is the developer of F* - a dependently typed functional language used for making safe blockchain transactions.',
+    linkedInUrl: 'https://www.linkedin.com/in/amanning1/'
   }
 ]
 

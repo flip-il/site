@@ -80,11 +80,11 @@ export const AgendaDataTalks : Agenda<RoomsTalks> = {
       endTime: '11:00',
       events: [{
         id: 1,
-        title: 'Spoxy Proxy',
+        title: 'Practical Dependent Types for Better Blockchains',
         shortDescription: true,
-        description: 'Creating a smart proxy with a short-lived internal cache using Elixir',
+        description: 'Learn about dependent types - what they are, how to use them - and how they can improve your code!',
         room: auditorium,
-        speakers: [Speakers['yaron wittenstein']]
+        speakers: [Speakers['asher manning']]
       },
       {
         id: 1,
